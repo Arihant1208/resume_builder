@@ -1,0 +1,34 @@
+About the Role:
+
+We are looking for a seasoned full-stack engineer to build out and manage our entire web infrastructure. Successful candidates will have a minimum of three years’ recent experience with all of the skills listed below.
+Our project entails implementing our pre-approved UI, constructing our API, connecting the two, and setting up our server infrastructure. This includes all associated areas such as database and architecture design.
+ 
+
+Key Responsibilities:
+
+Design and implementation of the overall web architecture
+“Pixel-perfect” implementation of our approved user interface
+Design and deployment of our database
+Ensuring the entire stack is designed and built for speed and scalability
+Design and construction of our REST API
+Integrating our front-end UI with the constructed API
+Design and implementation of continuous integration and deployment
+Superb interpersonal, communication, and collaboration skills.
+Exceptional analytical and problem-solving aptitude.
+Great organizational and time management skills.
+Availability to resolve urgent web application issues outside of business hours.
+ 
+
+Requirements:
+
+BE/B.Tech/MCA or equivalent.
+Minimum 4+ years of experience with:Writing HTML, CSS, and JavaScript. Being up on latest practices is a must, e.g., HTML5, CSS3, and ECMAScript 6 (minimum)
+A relevant back-end programming language {{ e.g., PHP, Python, Ruby or JavaScript }}
+Database design and management, including being up on the latest practices and associated versions.
+Server management and deployment for the relevant environment.
+Familiarity with a relevant and globally supported framework—both front-end and back-end, if necessary—{{ e.g., React, Vue, Laravel or Flask }}
+Ideally, familiarity with CSS preprocessors, bundlers, and associated languages/syntaxes/libraries {{ e.g., Sass, Less, and webpack }}
+Thorough understanding of user experience and possibly even product strategy.
+Experience implementing testing platforms and unit tests.
+Proficiency with Git {{ or another version control system as required }}
+Appreciation for clean and well documented code.
