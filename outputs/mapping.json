@@ -18,5 +18,10 @@
     "job": "jobs/akemi_solutionArchitect.txt",
     "resume": "outputs/resume_akemi_solutionArchitect.tex",
     "generated_at": "2026-03-16T12:13:01+00:00"
+  },
+  {
+    "job": "jobs/bytedance_backend.txt",
+    "resume": "outputs/resume_bytedance_backend.tex",
+    "generated_at": "2026-03-16T12:32:39+00:00"
   }
 ]
