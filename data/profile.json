@@ -1,0 +1,185 @@
+{
+  "basics": {
+    "name": "Arihant Jain",
+    "title": "Software Engineer",
+    "email": "arihant.opensource@gmail.com",
+    "phone": "",
+    "location": "",
+    "linkedin": "https://linkedin.com/in/arihantjain1208",
+    "github": "https://github.com/Arihant1208",
+    "portfolio": "",
+    "summary": "Software engineer with experience across backend systems, developer platforms, cloud integrations, and full-stack product delivery. Built cost-optimization workflows, security-focused portals, and production APIs using modern web, cloud, and data tooling."
+  },
+  "skills": [
+    {"name": "C#", "category": "Languages", "tags": ["c#", "dotnet", "backend"]},
+    {"name": "Python", "category": "Languages", "tags": ["python", "backend", "automation", "deep learning"]},
+    {"name": "Java", "category": "Languages", "tags": ["java", "backend", "spring"]},
+    {"name": "JavaScript", "category": "Languages", "tags": ["javascript", "frontend", "web"]},
+    {"name": "TypeScript", "category": "Languages", "tags": ["typescript", "frontend", "backend", "full-stack"]},
+    {"name": "Rust", "category": "Languages", "tags": ["rust", "systems", "performance"]},
+    {"name": "HTML/CSS", "category": "Languages", "tags": ["html", "css", "frontend"]},
+    {"name": "React.js", "category": "Web Frameworks", "tags": ["react", "frontend", "web", "spa"]},
+    {"name": "Node.js", "category": "Web Frameworks", "tags": ["nodejs", "backend", "api", "express"]},
+    {"name": "Express.js", "category": "Web Frameworks", "tags": ["express", "nodejs", "api", "backend"]},
+    {"name": ".NET", "category": "Web Frameworks", "tags": ["dotnet", "c#", "backend"]},
+    {"name": "Spring Boot", "category": "Web Frameworks", "tags": ["spring boot", "java", "backend"]},
+    {"name": "Next.js", "category": "Web Frameworks", "tags": ["nextjs", "react", "typescript", "ssr"]},
+    {"name": "React Native / Expo", "category": "Web Frameworks", "tags": ["react native", "expo", "mobile", "cross-platform"]},
+    {"name": "Prisma", "category": "ORMs", "tags": ["prisma", "orm", "database"]},
+    {"name": "Drizzle ORM", "category": "ORMs", "tags": ["drizzle", "orm", "database"]},
+    {"name": "AWS", "category": "Cloud", "tags": ["aws", "cloud", "deployment", "s3"]},
+    {"name": "Azure", "category": "Cloud", "tags": ["azure", "cloud", "integration", "bicep", "container apps"]},
+    {"name": "Docker / Docker Compose", "category": "DevOps", "tags": ["docker", "containers", "devops", "docker compose"]},
+    {"name": "Kubernetes / Helm", "category": "DevOps", "tags": ["kubernetes", "helm", "k8s", "orchestration"]},
+    {"name": "CI/CD", "category": "DevOps", "tags": ["ci/cd", "deployment", "automation", "github actions"]},
+    {"name": "Bicep / IaC", "category": "DevOps", "tags": ["bicep", "infrastructure as code", "azure", "iac"]},
+    {"name": "OpenTelemetry", "category": "DevOps", "tags": ["opentelemetry", "observability", "tracing", "monitoring"]},
+    {"name": "Git/GitHub", "category": "Tools", "tags": ["git", "github", "version control"]},
+    {"name": "Unix Shell", "category": "Tools", "tags": ["shell", "unix", "automation"]},
+    {"name": "VS Code", "category": "Tools", "tags": ["vscode", "developer tools"]},
+    {"name": "Stripe", "category": "Integrations", "tags": ["stripe", "payments", "webhooks"]},
+    {"name": "OpenAI API", "category": "Integrations", "tags": ["openai", "ai", "llm", "gpt"]},
+    {"name": "Gemini AI", "category": "Integrations", "tags": ["gemini", "ai", "google", "llm"]},
+    {"name": "Google OAuth", "category": "Integrations", "tags": ["oauth", "google", "authentication"]},
+    {"name": "MongoDB", "category": "Databases", "tags": ["mongodb", "nosql", "database"]},
+    {"name": "SQL", "category": "Databases", "tags": ["sql", "database", "queries"]},
+    {"name": "PostgreSQL", "category": "Databases", "tags": ["postgresql", "sql", "database"]},
+    {"name": "Redis", "category": "Databases", "tags": ["redis", "cache", "queue", "bullmq"]},
+    {"name": "Pinecone", "category": "Databases", "tags": ["pinecone", "vector database", "embeddings"]}
+  ],
+  "experience": [
+    {
+      "company": "Source Code Control",
+      "title": "Technical Consultant",
+      "location": "",
+      "start_date": "2024-05",
+      "end_date": "Present",
+      "tags": ["cloud migration", "cost optimization", "azure", "api", "portal", "sbom", "supply chain security", "scheduler", "full-stack", "nightingalehq", "gosmarter", "product development", "react", "dotnet", "azure functions", "docker", "github actions"],
+      "bullets": [
+        "Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30%.",
+        "Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.",
+        "Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.",
+        "Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD."
+      ]
+    },
+    {
+      "company": "Amazon",
+      "title": "Software Development Engineer Intern",
+      "location": "",
+      "start_date": "2023-01",
+      "end_date": "2023-07",
+      "tags": ["authentication", "api", "testing", "deployment", "amazon business", "backend", "account management"],
+      "bullets": [
+        "Led a project to overhaul the authentication system, improving accessibility and overall user experience.",
+        "Executed changes to streamline user access, contributing to a projected 33% increase in user retention for Amazon Business.",
+        "Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.",
+        "Engineered a solution for storing and retrieving account types in the authentication service.",
+        "Contributed across the software development lifecycle, from specification and design through rollout and maintenance.",
+        "Worked with senior engineers on design, coding, testing, and long-term maintainability."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AR-Dine",
+      "role": "Creator",
+      "link": "https://github.com/Arihant1208/ARDine",
+      "tags": ["typescript", "react", "express", "postgresql", "redis", "docker", "azure", "bicep", "helm", "kubernetes", "stripe", "google oauth", "opentelemetry", "gemini ai", "bullmq", "minio", "s3", "clamav", "full-stack", "ar"],
+      "bullets": [
+        "Built an AI-powered AR restaurant menu and ordering platform with separated customer and owner flows.",
+        "Implemented Google OAuth authentication, Stripe payment processing (card, UPI, cash), and real-time order tracking with a state machine.",
+        "Designed an 8-service Docker Compose architecture with Express API, BullMQ worker, PostgreSQL, Redis, MinIO, ClamAV, and OpenTelemetry.",
+        "Automated 3D dish model generation using Gemini AI with a decoupled BullMQ worker pipeline.",
+        "Created Azure deployment infrastructure with Bicep IaC, CI/CD via GitHub Actions, and a Helm chart for Kubernetes (AKS/EKS/GKE).",
+        "Implemented security measures including JWT auth, rate limiting, ClamAV malware scanning, CSP headers, and parameterized SQL queries."
+      ]
+    },
+    {
+      "name": "Security Audit Framework",
+      "role": "Creator",
+      "link": "https://github.com/Arihant1208/Security_audit",
+      "tags": ["security", "owasp", "stride", "threat modeling", "risk scoring", "compliance", "nist", "cis", "soc2", "audit"],
+      "bullets": [
+        "Built a comprehensive 7-phase security audit framework covering 12 security layers from architecture to business logic.",
+        "Documented 27 attack patterns across identity, application, infrastructure, network, supply chain, and client-side categories.",
+        "Created STRIDE threat modeling templates, risk scoring calculators, and remediation guides for common vulnerability classes.",
+        "Mapped findings to OWASP Top 10, NIST CSF, CIS Controls v8, and SOC 2 compliance standards."
+      ]
+    },
+    {
+      "name": "ChatPDF",
+      "role": "Builder",
+      "link": "https://github.com/Arihant1208/ChatPdf",
+      "tags": ["typescript", "nextjs", "postgresql", "aws", "pinecone", "openai", "pdf", "chat application", "drizzle"],
+      "bullets": [
+        "Built a chat application that lets users interact with PDF documents through context-aware conversations.",
+        "Implemented PDF upload and chat creation workflows around uploaded documents.",
+        "Integrated the OpenAI API to generate responses tailored to the active document and chat context.",
+        "Used PostgreSQL with Drizzle ORM for efficient data interactions and persistence.",
+        "Worked with a stack that included TypeScript, Next.js, AWS, and Pinecone vector database."
+      ]
+    },
+    {
+      "name": "KitchenWiz",
+      "role": "Builder",
+      "link": "https://github.com/Arihant1208/KitchenWiz",
+      "tags": ["typescript", "react native", "expo", "gemini ai", "mobile", "ai", "kitchen assistant"],
+      "bullets": [
+        "Built an AI-powered kitchen assistant mobile app using Expo and React Native.",
+        "Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.",
+        "Developed backend services and database layer for persistent user data."
+      ]
+    },
+    {
+      "name": "StockTally",
+      "role": "Builder",
+      "link": "https://github.com/Arihant1208/StockTally",
+      "tags": ["typescript", "nextjs", "prisma", "tailwind", "inventory", "stock tracking"],
+      "bullets": [
+        "Built a stock and inventory tracking application using Next.js and Prisma ORM.",
+        "Designed data models and schema for product and inventory management.",
+        "Styled with Tailwind CSS for a responsive user interface."
+      ]
+    },
+    {
+      "name": "Preserving Heritage",
+      "role": "Builder",
+      "link": "https://github.com/Arihant1208/PRESERVING-MONUMENTS",
+      "tags": ["python", "deep learning", "computer vision", "cnn", "jupyter", "satellite images", "weather api"],
+      "bullets": [
+        "Built a computer vision project to identify and support preservation of heritage sites using satellite imagery.",
+        "Trained a CNN-based model for monument identification.",
+        "Integrated weather prediction data using a weather API.",
+        "Developed the project in a Jupyter Notebook environment using Python and deep learning workflows."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft 365 Certified: Endpoint Administrator Associate",
+      "issuer": "Microsoft",
+      "date": "2025-07",
+      "tags": ["microsoft 365", "endpoint", "intune", "device management", "cloud"]
+    },
+    {
+      "name": "Microsoft Certified: Fabric Data Engineer Associate",
+      "issuer": "Microsoft",
+      "date": "2026-01",
+      "tags": ["microsoft fabric", "data engineering", "data pipeline", "analytics", "cloud"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Chandigarh Engineering College",
+      "degree": "BTech Information Technology | GPA: 8.3",
+      "start_date": "",
+      "end_date": "2023-06",
+      "location": ""
+    }
+  ],
+  "achievements": [
+    "Solved more than 500 coding problems on various programming websites.",
+    "Selected for SIH 2022 (Smart India Hackathon) External.",
+    "3-star programmer on CodeChef."
+  ]
+}

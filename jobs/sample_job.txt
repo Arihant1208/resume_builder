@@ -1,0 +1,11 @@
+We are hiring a Software Engineer to build backend systems and internal platforms.
+
+Requirements:
+- Strong Python development experience.
+- Experience with REST APIs, SQL databases, and cloud deployment.
+- Familiarity with Docker and CI/CD workflows.
+- Ability to work across teams and deliver reliable production software.
+
+Nice to have:
+- Exposure to Azure.
+- Experience with automation and developer tooling.

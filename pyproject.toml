@@ -1,0 +1,22 @@
+[project]
+name = "resume-builder"
+version = "0.1.0"
+description = "Generate ATS-friendly tailored resumes from structured profile data and job descriptions."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Arihant" }
+]
+
+[project.scripts]
+resume-builder = "resume_builder.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

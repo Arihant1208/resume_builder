@@ -1,0 +1,54 @@
+name: Generate Resume
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_file:
+        description: "Job description filename inside jobs/ (e.g. google_sde.txt)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: pip install -e .
+
+      - name: Validate job file exists
+        run: |
+          if [ ! -f "jobs/${{ inputs.job_file }}" ]; then
+            echo "::error::Job file jobs/${{ inputs.job_file }} not found."
+            exit 1
+          fi
+
+      - name: Generate resume
+        run: |
+          python -m resume_builder build --job "jobs/${{ inputs.job_file }}"
+          echo "## Generated Resume" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          STEM="${{ inputs.job_file }}"
+          STEM="${STEM%.txt}"
+          echo "Resume: \`outputs/resume_${STEM}.tex\`" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit generated resume and mapping
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs/
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          STEM="${{ inputs.job_file }}"
+          STEM="${STEM%.txt}"
+          git commit -m "Generate resume for ${STEM}"
+          git push

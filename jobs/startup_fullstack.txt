@@ -1,0 +1,14 @@
+Full Stack Engineer at a fast-growing startup.
+
+Requirements:
+- 2+ years of experience building web applications.
+- Strong proficiency in React, TypeScript, and Node.js.
+- Experience with PostgreSQL or similar relational databases.
+- Familiarity with cloud platforms (AWS or Azure).
+- Experience with Docker and containerized deployments.
+- Excellent understanding of REST API design.
+
+Nice to have:
+- Experience with Next.js or similar SSR frameworks.
+- CI/CD pipeline setup with GitHub Actions.
+- Exposure to AI/ML integrations.
