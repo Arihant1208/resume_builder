@@ -83,11 +83,12 @@ python -m resume_builder list --json
 A manual workflow lets you generate a resume from GitHub without a local setup.
 
 1. Push a job file to `jobs/`.
-2. The `Sync Job Dropdown Options` workflow automatically updates the dropdown choices after the push.
-3. Go to **Actions → Generate Resume → Run workflow**.
-4. Select the job filename from the dropdown.
-5. The workflow generates the resume, analyzes your fit for the role, and shows selection likelihood, strong points, and gaps in the run summary.
-6. It then commits the generated resume and updated mapping to `outputs/`.
+2. Configure a repository secret named `WORKFLOW_SYNC_TOKEN` with a PAT or fine-grained token that has `Contents: Read and write` and `Workflows: Read and write`.
+3. The `Sync Job Dropdown Options` workflow automatically updates the dropdown choices after the push.
+4. Go to **Actions → Generate Resume → Run workflow**.
+5. Select the job filename from the dropdown.
+6. The workflow generates the resume, analyzes your fit for the role, and shows selection likelihood, strong points, and gaps in the run summary.
+7. It then commits the generated resume and updated mapping to `outputs/`.
 
 ## Data strategy
 

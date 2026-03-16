@@ -13,8 +13,19 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Ensure sync token is configured
+        env:
+          WORKFLOW_SYNC_TOKEN: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
+        run: |
+          if [ -z "$WORKFLOW_SYNC_TOKEN" ]; then
+            echo "::error::Missing secret WORKFLOW_SYNC_TOKEN. Create a PAT or fine-grained token with Contents: Read and write and Workflows: Read and write, then add it as a repository secret named WORKFLOW_SYNC_TOKEN."
+            exit 1
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,10 +36,12 @@ jobs:
         run: python scripts/sync_job_options.py
 
       - name: Commit workflow update
+        env:
+          WORKFLOW_SYNC_TOKEN: ${{ secrets.WORKFLOW_SYNC_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .github/workflows/generate-resume.yml
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "Sync workflow job dropdown options"
-          git push
+          git push origin HEAD:main
