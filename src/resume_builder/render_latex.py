@@ -181,16 +181,6 @@ def render_education(education: list[Education]) -> str:
     return "\n".join(lines)
 
 
-def render_achievements(achievements: list[str]) -> str:
-    if not achievements:
-        return ""
-    lines = [r"\section{Achievements}", r"\begin{itemize}"]
-    for item in achievements:
-        lines.append(rf"  \item {_escape(item)}")
-    lines.append(r"\end{itemize}")
-    return "\n".join(lines)
-
-
 # ── Main entry point ──────────────────────────────────────────────
 
 def render_resume_latex(
@@ -201,7 +191,6 @@ def render_resume_latex(
     projects: list[Project],
     certificates: list[Certificate],
     education: list[Education],
-    achievements: list[str],
 ) -> str:
     sections = [
         render_header(basics),
@@ -211,7 +200,6 @@ def render_resume_latex(
         render_projects(projects),
         render_certificates(certificates),
         render_education(education),
-        render_achievements(achievements),
     ]
 
     body = "\n\n".join(s for s in sections if s)

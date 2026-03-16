@@ -86,15 +86,6 @@ def render_education(education: list[Education]) -> list[str]:
     return lines
 
 
-def render_achievements(achievements: list[str]) -> list[str]:
-    if not achievements:
-        return []
-    lines = ["## Achievements"]
-    for item in achievements:
-        lines.append(f"- {item}")
-    return lines
-
-
 def render_resume(
     basics: Basics,
     summary: str,
@@ -103,7 +94,6 @@ def render_resume(
     projects: list[Project],
     certificates: list[Certificate],
     education: list[Education],
-    achievements: list[str],
 ) -> str:
     sections = [
         render_header(basics),
@@ -113,7 +103,6 @@ def render_resume(
         render_projects(projects),
         render_certificates(certificates),
         render_education(education),
-        render_achievements(achievements),
     ]
 
     lines: list[str] = []

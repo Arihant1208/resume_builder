@@ -6,7 +6,7 @@ This repository keeps your full professional profile in one place and generates 
 
 - Stores your master profile in structured JSON.
 - Ranks experience, projects, skills, and certificates against a job description.
-- Produces a focused resume in Markdown that is easy to export to PDF later.
+- Produces a focused resume in LaTeX that is easy to compile to PDF.
 - Keeps the generated output clean and ATS-safe by avoiding tables, columns, and visual-only formatting.
 
 ## Project layout
@@ -66,6 +66,8 @@ This produces `outputs/resume_google_sde.tex`, `outputs/resume_amazon_backend.te
 
 Every build appends to `outputs/mapping.json`. View it as a table:
 
+If a resume already exists for the same job file, the old mapped output is removed and the mapping entry is replaced with the latest generated file.
+
 ```bash
 python -m resume_builder list
 ```
@@ -84,7 +86,8 @@ A manual workflow lets you generate a resume from GitHub without a local setup.
 2. The `Sync Job Dropdown Options` workflow automatically updates the dropdown choices after the push.
 3. Go to **Actions → Generate Resume → Run workflow**.
 4. Select the job filename from the dropdown.
-5. The workflow generates the resume, commits it to `outputs/`, and shows it in the run summary.
+5. The workflow generates the resume, analyzes your fit for the role, and shows selection likelihood, strong points, and gaps in the run summary.
+6. It then commits the generated resume and updated mapping to `outputs/`.
 
 ## Data strategy
 

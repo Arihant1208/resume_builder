@@ -8,22 +8,60 @@ from .models import Certificate, Experience, Profile, Project, Skill
 STOPWORDS = {
     "a",
     "an",
+    "ability",
     "and",
     "are",
     "as",
     "at",
     "be",
     "build",
+    "building",
     "by",
+    "candidate",
+    "company",
+    "deliver",
+    "description",
+    "engineer",
+    "engineering",
+    "excellent",
+    "experience",
+    "familiarity",
     "for",
     "from",
+    "full",
+    "growing",
+    "have",
+    "help",
     "in",
     "is",
+    "job",
+    "knowledge",
+    "looking",
+    "nice",
+    "plus",
+    "requirements",
+    "required",
+    "responsibilities",
+    "role",
+    "roles",
+    "similar",
+    "skills",
+    "startup",
+    "strong",
     "of",
     "on",
     "or",
+    "our",
+    "plus",
+    "preferred",
+    "team",
     "the",
+    "their",
+    "this",
     "to",
+    "understanding",
+    "using",
+    "years",
     "with",
     "you",
     "your",
@@ -33,7 +71,17 @@ STOPWORDS = {
 
 
 def tokenize(text: str) -> list[str]:
-    return [token for token in re.findall(r"[a-zA-Z0-9+#.-]+", text.lower()) if token not in STOPWORDS]
+    tokens: list[str] = []
+    for token in re.findall(r"[a-zA-Z0-9+#.-]+", text.lower()):
+        cleaned = token.strip(".-")
+        if len(cleaned) < 3:
+            continue
+        if any(char.isdigit() for char in cleaned):
+            continue
+        if cleaned in STOPWORDS:
+            continue
+        tokens.append(cleaned)
+    return tokens
 
 
 def extract_keywords(job_description: str, limit: int = 40) -> list[str]:
@@ -60,6 +108,87 @@ def score_entry(title: str, tags: list[str], bullets: list[str], keywords: set[s
 def best_bullets(bullets: list[str], keywords: set[str], limit: int) -> list[str]:
     ranked = sorted(bullets, key=lambda bullet: (score_text(bullet, keywords), len(bullet)), reverse=True)
     return ranked[:limit]
+
+
+def _profile_terms(profile: Profile) -> set[str]:
+    terms: set[str] = set()
+    terms.update(tokenize(profile.basics.summary))
+
+    for skill in profile.skills:
+        terms.update(tokenize(skill.name))
+        terms.update(tokenize(" ".join(skill.tags)))
+
+    for item in profile.experience:
+        terms.update(tokenize(item.title))
+        terms.update(tokenize(item.company))
+        terms.update(tokenize(" ".join(item.tags)))
+        terms.update(tokenize(" ".join(item.bullets)))
+
+    for item in profile.projects:
+        terms.update(tokenize(item.name))
+        terms.update(tokenize(item.role))
+        terms.update(tokenize(" ".join(item.tags)))
+        terms.update(tokenize(" ".join(item.bullets)))
+
+    for item in profile.certificates:
+        terms.update(tokenize(item.name))
+        terms.update(tokenize(item.issuer))
+        terms.update(tokenize(" ".join(item.tags)))
+
+    return terms
+
+
+def _likelihood_label(score: int) -> str:
+    if score >= 80:
+        return "High"
+    if score >= 60:
+        return "Moderate"
+    if score >= 40:
+        return "Medium-Low"
+    return "Low"
+
+
+def analyze_job_fit(profile: Profile, job_description: str) -> dict:
+    keywords = extract_keywords(job_description, limit=20)
+    keyword_set = set(keywords)
+    profile_terms = _profile_terms(profile)
+
+    matched_keywords = [keyword for keyword in keywords if keyword in profile_terms]
+    missing_keywords = [keyword for keyword in keywords if keyword not in profile_terms]
+    score = round((len(matched_keywords) / max(len(keywords), 1)) * 100)
+
+    top_skills = sorted(profile.skills, key=lambda item: score_skill(item, keyword_set), reverse=True)
+    top_experience = sorted(
+        profile.experience,
+        key=lambda item: score_entry(f"{item.title} {item.company}", item.tags, item.bullets, keyword_set),
+        reverse=True,
+    )
+    top_projects = sorted(
+        profile.projects,
+        key=lambda item: score_entry(f"{item.name} {item.role}", item.tags, item.bullets, keyword_set),
+        reverse=True,
+    )
+
+    strengths: list[str] = []
+    for skill in top_skills[:4]:
+        if score_skill(skill, keyword_set) > 0:
+            strengths.append(f"Skill match: {skill.name}")
+    for item in top_experience[:2]:
+        entry_score = score_entry(f"{item.title} {item.company}", item.tags, item.bullets, keyword_set)
+        if entry_score > 0:
+            strengths.append(f"Relevant experience: {item.title} at {item.company}")
+    for item in top_projects[:2]:
+        entry_score = score_entry(f"{item.name} {item.role}", item.tags, item.bullets, keyword_set)
+        if entry_score > 0:
+            strengths.append(f"Relevant project: {item.name}")
+
+    return {
+        "score": score,
+        "likelihood": _likelihood_label(score),
+        "matched_keywords": matched_keywords[:10],
+        "missing_keywords": missing_keywords[:10],
+        "strong_points": strengths[:6],
+    }
 
 
 def tailor_profile(profile: Profile, job_description: str) -> dict:

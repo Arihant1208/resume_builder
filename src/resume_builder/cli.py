@@ -7,9 +7,13 @@ from pathlib import Path
 
 from .loader import load_job_description, load_profile
 from .render_latex import render_resume_latex
-from .tailor import tailor_profile
+from .tailor import analyze_job_fit, tailor_profile
 
 MAPPING_FILE = Path("outputs/mapping.json")
+
+
+def _normalize_path(value: str | Path) -> str:
+    return Path(value).as_posix()
 
 
 def _load_mapping() -> list[dict]:
@@ -28,6 +32,23 @@ def _auto_output_path(job_path: str) -> Path:
     return Path("outputs") / f"resume_{stem}.tex"
 
 
+def _remove_existing_resume_outputs(mapping: list[dict], job_path: str, output: Path) -> list[dict]:
+    normalized_job = _normalize_path(job_path)
+    kept_entries: list[dict] = []
+
+    for entry in mapping:
+        entry_job = _normalize_path(entry["job"])
+        if entry_job != normalized_job:
+            kept_entries.append(entry)
+            continue
+
+        existing_resume = Path(entry["resume"])
+        if existing_resume != output and existing_resume.exists():
+            existing_resume.unlink()
+
+    return kept_entries
+
+
 def build_resume(profile_path: str, job_path: str, output_path: str | None = None) -> Path:
     profile = load_profile(profile_path)
     job_description = load_job_description(job_path)
@@ -41,17 +62,19 @@ def build_resume(profile_path: str, job_path: str, output_path: str | None = Non
         projects=tailored["projects"],
         certificates=tailored["certificates"],
         education=tailored["education"],
-        achievements=profile.achievements,
     )
 
     output = Path(output_path) if output_path else _auto_output_path(job_path)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(content, encoding="utf-8")
 
     mapping = _load_mapping()
+    mapping = _remove_existing_resume_outputs(mapping, job_path, output)
+
+    output.write_text(content, encoding="utf-8")
+
     mapping.append({
-        "job": str(Path(job_path)),
-        "resume": str(output),
+        "job": _normalize_path(job_path),
+        "resume": _normalize_path(output),
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     })
     _save_mapping(mapping)
@@ -67,6 +90,11 @@ def create_parser() -> argparse.ArgumentParser:
     build.add_argument("--profile", default="data/profile.json", help="Path to profile JSON file (default: data/profile.json).")
     build.add_argument("--job", required=True, help="Path to job description text file.")
     build.add_argument("--output", default=None, help="Output LaTeX file. Auto-generated from job filename if omitted.")
+
+    analyze = subparsers.add_parser("analyze", help="Analyze how well your profile matches a job description.")
+    analyze.add_argument("--profile", default="data/profile.json", help="Path to profile JSON file (default: data/profile.json).")
+    analyze.add_argument("--job", required=True, help="Path to job description text file.")
+    analyze.add_argument("--json", dest="as_json", action="store_true", help="Output analysis as JSON.")
 
     list_parser = subparsers.add_parser("list", help="List all generated resume mappings.")
     list_parser.add_argument("--json", dest="as_json", action="store_true", help="Output as JSON.")
@@ -89,6 +117,25 @@ def _list_mappings(as_json: bool) -> int:
     return 0
 
 
+def _analyze(profile_path: str, job_path: str, as_json: bool) -> int:
+    profile = load_profile(profile_path)
+    job_description = load_job_description(job_path)
+    analysis = analyze_job_fit(profile, job_description)
+
+    if as_json:
+        print(json.dumps(analysis, indent=2))
+        return 0
+
+    print(f"Selection likelihood: {analysis['likelihood']} ({analysis['score']}%)")
+    print("Strong points:")
+    for item in analysis["strong_points"]:
+        print(f"- {item}")
+    print("Potential gaps:")
+    for item in analysis["missing_keywords"]:
+        print(f"- {item}")
+    return 0
+
+
 def main() -> int:
     parser = create_parser()
     args = parser.parse_args()
@@ -97,6 +144,9 @@ def main() -> int:
         output_path = build_resume(args.profile, args.job, args.output)
         print(f"Resume written to {output_path}")
         return 0
+
+    if args.command == "analyze":
+        return _analyze(args.profile, args.job, args.as_json)
 
     if args.command == "list":
         return _list_mappings(args.as_json)

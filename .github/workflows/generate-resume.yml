@@ -48,12 +48,34 @@ jobs:
           STEM="${STEM%.txt}"
           echo "Resume: \`outputs/resume_${STEM}.tex\`" >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Analyze job fit
+        run: |
+          python -m resume_builder analyze --job "jobs/${{ inputs.job_file }}" --json > analysis.json
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          analysis = json.loads(Path("analysis.json").read_text(encoding="utf-8"))
+          summary = Path(os.environ["GITHUB_STEP_SUMMARY"])
+
+          with summary.open("a", encoding="utf-8") as handle:
+              handle.write("\n\n## Match Analysis\n\n")
+              handle.write(f"Selection likelihood: **{analysis['likelihood']} ({analysis['score']}%)**\n\n")
+              handle.write("### Strong points\n")
+              for item in analysis["strong_points"]:
+                  handle.write(f"- {item}\n")
+              handle.write("\n### Potential gaps\n")
+              for item in analysis["missing_keywords"]:
+                  handle.write(f"- {item}\n")
+          PY
+
 
       - name: Commit generated resume and mapping
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add outputs/
+          git add -A outputs/
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           STEM="${{ inputs.job_file }}"
           STEM="${STEM%.txt}"
