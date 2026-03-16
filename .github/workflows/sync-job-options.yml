@@ -6,6 +6,10 @@ on:
       - jobs/*.txt
   workflow_dispatch:
 
+concurrency:
+  group: sync-job-options-main
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -44,4 +48,5 @@ jobs:
           git add .github/workflows/generate-resume.yml
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "Sync workflow job dropdown options"
+          git pull --rebase origin main
           git push origin HEAD:main
