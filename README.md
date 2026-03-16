@@ -34,10 +34,10 @@ python -m pip install -e .
 python -m resume_builder build --job jobs/sample_job.txt
 ```
 
-The output file is auto-named from the job file: `outputs/resume_sample_job.md`. You can override it:
+The output file is auto-named from the job file: `outputs/resume_sample_job.tex`. You can override it:
 
 ```bash
-python -m resume_builder build --job jobs/sample_job.txt --output outputs/custom_name.md
+python -m resume_builder build --job jobs/sample_job.txt --output outputs/custom_name.tex
 ```
 
 Profile defaults to `data/profile.json`. Override with `--profile`.
@@ -60,7 +60,7 @@ python -m resume_builder build --job jobs/amazon_backend.txt
 python -m resume_builder build --job jobs/startup_fullstack.txt
 ```
 
-This produces `outputs/resume_google_sde.md`, `outputs/resume_amazon_backend.md`, etc.
+This produces `outputs/resume_google_sde.tex`, `outputs/resume_amazon_backend.tex`, etc.
 
 ## Mapping: which resume was built for which job
 
@@ -81,9 +81,10 @@ python -m resume_builder list --json
 A manual workflow lets you generate a resume from GitHub without a local setup.
 
 1. Push a job file to `jobs/`.
-2. Go to **Actions → Generate Resume → Run workflow**.
-3. Enter the job filename (e.g. `google_sde.txt`).
-4. The workflow generates the resume, commits it to `outputs/`, and shows it in the run summary.
+2. The `Sync Job Dropdown Options` workflow automatically updates the dropdown choices after the push.
+3. Go to **Actions → Generate Resume → Run workflow**.
+4. Select the job filename from the dropdown.
+5. The workflow generates the resume, commits it to `outputs/`, and shows it in the run summary.
 
 ## Data strategy
 

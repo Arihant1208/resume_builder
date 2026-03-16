@@ -8,8 +8,11 @@ on:
         required: true
         type: choice
         options:
+          # job-options:start
+          - kotak_fullsack.txt
           - sample_job.txt
           - startup_fullstack.txt
+          # job-options:end
 
 permissions:
   contents: write
@@ -44,6 +47,7 @@ jobs:
           STEM="${{ inputs.job_file }}"
           STEM="${STEM%.txt}"
           echo "Resume: \`outputs/resume_${STEM}.tex\`" >> "$GITHUB_STEP_SUMMARY"
+
 
       - name: Commit generated resume and mapping
         run: |

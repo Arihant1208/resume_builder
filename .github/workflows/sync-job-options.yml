@@ -1,0 +1,34 @@
+name: Sync Job Dropdown Options
+
+on:
+  push:
+    paths:
+      - jobs/*.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync dropdown options
+        run: python scripts/sync_job_options.py
+
+      - name: Commit workflow update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/generate-resume.yml
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Sync workflow job dropdown options"
+          git push
