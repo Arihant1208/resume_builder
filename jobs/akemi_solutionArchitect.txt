@@ -1,0 +1,42 @@
+Solutions Architect
+India (Remote)
+Job Description
+Do you enjoy creating innovative and strategic solutions to solve complex problems?
+
+Would the opportunity to provide technical consulting services to our customers excite you?
+
+Join our Professional Services team
+
+This team supports some of the world's major organizations in successfully integrating their websites on our platform. As an integrated team, we deliver services to architect optimum solutions for customer's unique requirements.
+
+Partner with our enterprise customers
+
+Work with Akamai's customers to design and implement solutions maximizing ROI, reducing risk and optimizing business initiatives. You will collaborate to solve complex infrastructure and application performance challenges aligned with our customers' business strategy.
+
+As a Solutions Architect, you will be responsible for:
+
+Owning the design, architecture, testing, and go-live technical aspects to ensure web, media, and security solutions.
+Being a proactive technical consultant and trusted advisor for our customers delivering value with every engagement
+Analyzing customer traffic and implementing Akamai security/delivery/compute solutions to address customers' security/delivery/compute needs
+Delivering coaching and training to customers to ensure the value and usability of our products.
+Partnering with cross-functional teams to resolve issues that arise during customer implementations.
+Leveraging Akamai tooling for technical implementation, automation, and enabling the use of APIs
+Do what you love
+
+To be successful in this role you will:
+
+Have a Bachelor's degree, with 2+ years experience and good knowledge in web applications, internet fundamentals, DNS, routing, communication protocols.
+Demonstrate knowledge of common OWASP top 10 and how they relate to internet service compromise or attacks.
+Be familiar with scripting languages such as Python/PERL/JavaScript and the overall DevOps framework & web development languages.
+Demonstrate experience in a technical customer-facing role and a desire to deliver consulting services.
+Have experience solving complex technical challenges with innovative solutions.
+Display communication and presentation skills that allow you to articulate highly technical information concisely.
+Build your career at Akamai
+
+Our ability to shape digital life today relies on developing exceptional people like you. The kind that can turn impossible into possible. We’re doing everything we can to make Akamai a great place to work. A place where you can learn, grow and have a meaningful impact.
+
+With our company moving so fast, it’s important that you’re able to build new skills, explore new roles, and try out different opportunities. There are so many different ways to build your career at Akamai, and we want to support you as much as possible. We have all kinds of development opportunities available, from programs such as GROW and Mentoring, to internal events like the APEX Expo and tools such as Linkedin Learning, all to help you expand your knowledge and experience here.
+
+Learn more
+
+Not sure if this job is the right match for you or want to learn more about the job before you apply? Schedule a 15-minute exploratory call with the Recruiter and they would be happy to share more details.
