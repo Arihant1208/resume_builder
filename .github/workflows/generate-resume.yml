@@ -4,9 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       job_file:
-        description: "Job description filename inside jobs/ (e.g. google_sde.txt)"
+        description: "Select a job description file from jobs/"
         required: true
-        type: string
+        type: choice
+        options:
+          - sample_job.txt
+          - startup_fullstack.txt
 
 permissions:
   contents: write
