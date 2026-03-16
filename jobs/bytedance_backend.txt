@@ -1,0 +1,67 @@
+Backend Engineer - Data AML Engine
+Location:
+
+Singapore
+
+Team:
+
+Technology
+
+Employment Type:
+
+Regular
+
+Job Code:
+
+A222648A
+
+Apply to this job
+Share this listing:
+
+
+default team image
+Responsibilities
+
+ByteDance will be prioritizing applicants who have a current right to work in Singapore, and do not require ByteDance's sponsorship of a visa.
+
+About the Team
+The mission of our AML team is to push next-generation machine learning algorithms and platform for the recommendation system, ads ranking and search ranking in our company. We also drive substantial impact for core businesses of the company.
+
+- Build an effective toolchain to improve development performance;
+- Introduce new AI technologies to our online system, support billions of users all over the world;
+- Improve the reliability of the system, manage the challenges of scale and complexity;
+- Squeeze extreme performance from hardware and handle huge amount of requests;
+- Research, design, and develop computer and network software or specialised utility programs;
+- Analyse user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis;
+- Update software, enhances existing software capabilities, and develops and direct software testing and validation procedures;
+- Work with computer hardware engineers to integrate hardware and software systems and develop specifications and performance requirements;
+
+Qualifications
+
+Minimum Qualifications:
+- Bachelor's degree or above, majoring in Computer Science, Engineering or related fields.
+- Strong programming and coding experience with at least one modern language such as C/C++, Golang, Python
+- Experience contributing to the large scale distributed systems, multi-tenant systems (architecture, reliability and scaling)
+- Strong analytical abilities and problem solving
+- Good communication, self-motivation, engineering practice, documentation, etc.
+- At least 3 years of relevant experience.
+
+Preferred Qualifications:
+- Familiar with large-scale distributed systems like Spark and Elasticsearch;
+- Familiar with the web technologies, such as Django / Flask / React.JS etc.
+
+Job Information
+
+About Us
+
+Founded in 2012, ByteDance's mission is to inspire creativity and enrich life. With a suite of more than a dozen products, including TikTok, Lemon8, CapCut and Pico as well as platforms specific to the China market, including Toutiao, Douyin, and Xigua, ByteDance has made it easier and more fun for people to connect with, consume, and create content.​
+
+Why Join ByteDance
+
+Inspiring creativity is at the core of ByteDance's mission. Our innovative products are built to help people authentically express themselves, discover and connect – and our global, diverse teams make that possible. Together, we create value for our communities, inspire creativity and enrich life - a mission we work towards every day.​
+
+As ByteDancers, we strive to do great things with great people. We lead with curiosity, humility, and a desire to make impact in a rapidly growing tech company. By constantly iterating and fostering an "Always Day 1" mindset, we achieve meaningful breakthroughs for ourselves, our Company, and our users. When we create and grow together, the possibilities are limitless. Join us.​
+
+Diversity & Inclusion​
+
+ByteDance is committed to creating an inclusive space where employees are valued for their skills, experiences, and unique perspectives. Our platform connects people from across the globe and so does our workplace. At ByteDance, our mission is to inspire creativity and enrich life. To achieve that goal, we are committed to celebrating our diverse voices and to creating an environment that reflects the many communities we reach. We are passionate about this and hope you are too.
