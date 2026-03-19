@@ -23,5 +23,10 @@
     "job": "jobs/bytedance_backend.txt",
     "resume": "outputs/resume_bytedance_backend.tex",
     "generated_at": "2026-03-16T12:32:39+00:00"
+  },
+  {
+    "job": "jobs/cohecity_se_2.txt",
+    "resume": "outputs/resume_cohecity_se_2.tex",
+    "generated_at": "2026-03-19T08:09:19+00:00"
   }
 ]
