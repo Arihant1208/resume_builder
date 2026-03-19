@@ -11,6 +11,7 @@ on:
           # job-options:start
           - akemi_solutionArchitect.txt
           - bytedance_backend.txt
+          - cohecity_se_2.txt
           - kotak_fullsack.txt
           - sample_job.txt
           - startup_fullstack.txt
