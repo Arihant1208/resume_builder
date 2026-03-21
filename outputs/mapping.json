@@ -53,5 +53,10 @@
     "job": "jobs/harness_se_2.txt",
     "resume": "outputs/resume_harness_se_2.tex",
     "generated_at": "2026-03-21T18:01:30+00:00"
+  },
+  {
+    "job": "jobs/google_SE_singapore.txt",
+    "resume": "outputs/resume_google_SE_singapore.tex",
+    "generated_at": "2026-03-21T18:20:50+00:00"
   }
 ]
