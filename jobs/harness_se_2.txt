@@ -1,0 +1,38 @@
+Software Engineer II - Customer Engineering
+Bengaluru, Karnataka, India
+Harness is the AI Software Delivery Platform company, led by technologist and entrepreneur Jyoti Bansal (founder of AppDynamics, acquired by Cisco for $3.7B). Harness has raised approximately $570M in funding and is valued at $5.5B, backed by leading investors including Goldman Sachs, Menlo Ventures, IVP, Unusual Ventures, Citi Ventures, and more. As AI accelerates code creation, the real bottleneck has shifted to everything after the code – testing, deployments, application security, reliability, compliance, and cost optimization. Harness brings AI and automation to this “outer loop,” helping teams ship software faster while maintaining security and governance throughout the entire software delivery lifecycle.
+
+Powered by Harness AI and the Software Delivery Knowledge Graph, the Harness Platform applies deep context and intelligent automation across the software delivery lifecycle with governance and policy-driven controls embedded throughout the platform. 
+
+Over the past year, Harness powered over 185M deployments, 82M builds, 18T flag evaluations, 8M security scans, 9.1B optimized tests, 3T protected API calls, and helped manage $2.8B in cloud spend — enabling customers like United Airlines, Morningstar, and Choice Hotels to accelerate releases by up to 75%, reduce cloud costs by up to 60%, and achieve 10x DevOps efficiency. 
+
+With a global team across 14 offices and 25 countries, Harness is shaping the future of AI software delivery — and we’re looking for exceptional talent to help us move even faster.
+
+About the Role
+Are you a software engineer who loves deconstructing complex problems and enjoys applying your skills to enable customer success? Join our Customer Engineering team in Bangalore in this unique hybrid role.
+
+This position blends deep technical software engineering expertise with a customer-facing focus. You will serve as the ultimate technical authority for our enterprise customers, leveraging your expertise in CI/CD and DevOps to architect solutions, troubleshoot complex technical challenges, and optimize software delivery pipelines using the Harness platform.
+
+This role offers a unique opportunity to gain in-depth, cross-functional expertise by working with the entire Harness Software Delivery Platform, including CI/CD, Feature Flags, Cloud Cost Management, and Security Testing Orchestration. Your code-level insight will be crucial in ensuring our customers achieve great success and become passionate advocates.
+
+Key Responsibilities
+Act as the trusted technical expert and primary point of contact for customers, using your software engineering background to guide them through the architecture and implementation of sophisticated CI/CD strategies and the entire SDLC. 
+Diagnose and resolve complex technical issues: Dive deep into customer environments, code, and configurations to troubleshoot and solve intricate problems related to pipeline execution, infrastructure integration, and performance.
+Master the Harness Platform: Develop in-depth, code-level expertise across multiple Harness modules (CI, CD, Feature Flags, Cloud Cost, and STO) to provide comprehensive guidance and demonstrate the platform's full value in addressing customer challenges.
+Translate customer pain points and requirements into best-practice solutions, often involving the integration of various Harness modules to create a seamless software delivery lifecycle.
+Collaborate with Product Management and Engineering by providing critical customer feedback, detailed use cases, and even code contributions or bug fixes to help shape the product roadmap.
+Develop and deliver advanced technical workshops and runbooks to empower customers.
+Qualifications & Must-Have Skills
+2-4 years of experience in a software engineering role with a strong focus on DevOps, CI/CD, and automation. A passion for moving into a highly technical, customer-facing role is essential.
+A proven passion for deep-dive troubleshooting: You enjoy the puzzle of a complex technical issue and don't rest until you find the root cause and solution. You are skilled at analyzing code, logs, and configurations to identify and resolve problems.
+Strong programming and scripting skills are a core requirement. Proficiency in one or more of the following: Go, Python, Java, or Shell.
+Hands-on experience with CI/CD platforms. Experience with Harness is a significant plus, as is experience with Jenkins, GitLab CI, GitHub Actions, or CircleCI.
+Solid understanding of containerization technologies like Docker and orchestration platforms like Kubernetes.
+Experience with Infrastructure as Code (IaC) tools such as Terraform or Ansible.
+Familiarity with cloud platforms (AWS, GCP, or Azure).
+Excellent problem-solving skills and a strong sense of ownership.
+Good-to-Have Skills
+Prior experience in a customer-facing technical role (e.g., Solutions Engineer, Customer Engineer).
+Direct development experience as an Android or iOS engineer.
+Experience with the Harness platform and its modules.
+Knowledge of monitoring and logging tools (Prometheus, Grafana, Splunk, Datadog).
