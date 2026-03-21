@@ -1,0 +1,45 @@
+Software Development Engineer in Test  View Jobs
+ID: 25468 | 1-3 yrs | Bangalore | careers
+Job Title: Software Development Engineer in Test
+
+Location: Bangalore
+
+Tenure: 1-3 years
+
+
+
+Position Overview: 
+
+Software Development Engineer in Test is a technical individual contributor role at Swiggy and in this role, an individual is solely responsible for setting up and implementation of test automation strategy from Functional and Non-functional perspective for one module or multiple modules who you work with. In this role, you are also responsible to find innovative ways to optimize the test strategy for maximizing ROI from areas that are undertaken for automation.
+
+
+
+What will you get to do here?
+
+SDET is responsible for the addition of new capabilities and features in the automation framework which is used by the entire QA team for test automation. You are also responsible for managing and maintaining test coverage through periodic reports to engineering and stakeholders.
+Will play an expert role and demands a complete hands-on contribution on Single or multiple projects simultaneously.
+Must be an Independent executioner and has prior experience in handling complex projects with stakeholders. ·    
+Must have prior experience in creating optimal test strategy (Including Functional, Non-Functional, Analytics and automation) and test plans for short term and long-term projects both. ·    
+Must have understanding and implementation level experience on design pattern
+
+
+   What qualities are we looking for?
+
+Should have 1-3 years experience in Automation Testing
+Should have a good understanding of relational databases like Oracle, MySQL, SQL Server.
+Should have hands-on experience in Java - Test automation. ·   
+Experience in any scripting language like python,· 
+Hands-on Experience on latest technologies for backend and front end development like react js, angular, Golang, servlet, bootstrap, input stream processing, JavaScript, NodeJS is a big plus.
+Must have experience in TestNG, Maven, HTTP client, rest and web services test automation, Selenium, Appium. 
+Must have a good understanding of DB queries, API Testing using Rest assured, joins, etc
+
+
+Visit our tech blogs to learn more about some of the challenges we deal with:
+
+https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6
+https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4
+https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886
+
+
+We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.
+
