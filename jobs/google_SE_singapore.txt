@@ -1,0 +1,42 @@
+Software Engineer, Wallet
+corporate_fare
+Google
+place
+Singapore
+info_outline
+X
+Google will be prioritizing applicants who have a current right to work in Singapore, and do not require Google's sponsorship of a visa.
+
+Minimum qualifications:
+Bachelor’s degree or equivalent practical experience.
+1 year of experience with software programming in languages such as Java, Kotlin, C++, Python or Go.
+1 year of experience with data structures and algorithms.
+
+Preferred qualifications:
+Experience with the full software development lifecycle.
+Experience with full-stack (client, server and database) development.
+Experience with Android application development.
+Knowledge of the payments or digital credentials landscape.
+Knowledge of NFC contactless payments.
+Passion for user-facing features and a strong sense of product excellence.
+About the job
+Google's software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We're looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design, networking and data storage, security, artificial intelligence, natural language processing, UI design and mobile; the list goes on and is growing every day. As a software engineer, you will work on a specific project critical to Google’s needs with opportunities to switch teams and projects as you and our fast-paced business grow and evolve. We need our engineers to be versatile, display leadership qualities and be enthusiastic to take on new problems across the full-stack as we continue to push technology forward.
+
+As a Software Engineer, you will design, develop, and launch innovative features Google Wallet. You'll have end-to-end responsibility for key areas, from design to deployment, directly impacting how millions of users digitize and use their everyday essentials.
+
+Whether it is paying online with Autofill, using tap and pay in stores, or using the Google Pay app, the Payments team at Google is focused on making payments simple, seamless, and secure. In addition to consumer payment technologies, the Payments team also powers the money movement between Google and its consumers and businesses.
+
+Responsibilities
+Work on building new features and a platform for Google Wallet on Android - the user's digital "file system" of credentials for use across Google and in the real world.
+Work with Product Managers and UX on building new features and enhancing existing features within the Google Wallet Android app, as well as help new integrators into Wallet making sure their data fits smoothly into our platform.
+Help us accommodate Wallet's growing scale and take advantage of the newest Android features, as well as help maintain and evolve the Wallet app's deep integration with both Google Play Services and the underlying Android platform.
+Help set the technical direction for the organization by building common abstractions, setting best practices, and working with our client infrastructure team to ensure harmonious growth and scaling.
+Information collected and processed as part of your Google Careers profile, and any job applications you choose to submit is subject to Google's Applicant and Candidate Privacy Policy.
+
+Google is proud to be an equal opportunity and affirmative action employer. We are committed to building a workforce that is representative of the users we serve, creating a culture of belonging, and providing an equal employment opportunity regardless of race, creed, color, religion, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition (including breastfeeding), expecting or parents-to-be, criminal histories consistent with legal requirements, or any other basis protected by law. See also Google's EEO Policy, Know your rights: workplace discrimination is illegal, Belonging at Google, and How we hire.
+
+If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.
+
+Google is a global company and, in order to facilitate efficient collaboration and communication globally, English proficiency is a requirement for all roles unless stated otherwise in the job posting.
+
+To all recruitment agencies: Google does not accept agency resumes. Please do not forward resumes to our jobs alias, Google employees, or any other organization location. Google is not responsible for any fees related to unsolicited resumes.
