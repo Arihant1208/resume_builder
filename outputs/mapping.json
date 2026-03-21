@@ -38,5 +38,10 @@
     "job": "jobs/docusign_se_fe.txt",
     "resume": "outputs/resume_docusign_se_fe.tex",
     "generated_at": "2026-03-21T17:26:58+00:00"
+  },
+  {
+    "job": "jobs/docusign_security.txt",
+    "resume": "outputs/resume_docusign_security.tex",
+    "generated_at": "2026-03-21T17:27:33+00:00"
   }
 ]
