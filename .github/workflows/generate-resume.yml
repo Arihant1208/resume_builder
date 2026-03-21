@@ -16,6 +16,7 @@ on:
           - docusign_se.txt
           - docusign_se_fe.txt
           - docusign_security.txt
+          - harness_se_2.txt
           - kotak_fullsack.txt
           - sample_job.txt
           - startup_fullstack.txt
