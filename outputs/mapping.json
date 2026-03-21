@@ -58,5 +58,10 @@
     "job": "jobs/google_SE_singapore.txt",
     "resume": "outputs/resume_google_SE_singapore.tex",
     "generated_at": "2026-03-21T18:20:50+00:00"
+  },
+  {
+    "job": "jobs/cohera_se.txt",
+    "resume": "outputs/resume_cohera_se.tex",
+    "generated_at": "2026-03-21T18:43:21+00:00"
   }
 ]
