@@ -1,0 +1,72 @@
+Software Engineer
+Engineering
+Company Overview
+
+
+Docusign brings agreements to life. Over 1.5 million customers and more than a billion people in over 180 countries use Docusign solutions to accelerate the process of doing business and simplify people’s lives. With intelligent agreement management, Docusign unleashes business-critical data that is trapped inside of documents. Until now, these were disconnected from business systems of record, costing businesses time, money, and opportunity. Using Docusign’s Intelligent Agreement Management platform, companies can create, commit, and manage agreements with solutions created by the #1 company in e-signature and contract lifecycle management (CLM).
+
+
+What you'll do
+
+
+We are looking for a passionate software engineer with experience in designing, implementing, and operating large scale distributed systems and excel at collaborating with partners. Ideally, you have a background in incident management, service catalogs, request tracing systems, time series telemetry platforms, application performance management tools or log management tools.
+
+ 
+
+This position is an individual contributor role reporting to the Sr Manager, SRE.
+ 
+
+Responsibility 
+
+Write high quality code that is easy to maintain and test
+
+Design and build platform components needed to power the observability stack
+
+Ensure design and architecture is extensible across projects, and participate in technical design and code reviews
+
+Work with Product Management, stakeholders and other developers to understand design requirements and provide estimates for development
+
+Stay current with the latest observability best practices and share your findings with the team
+
+Work as part of a cross-site development team
+
+Raise issues proactively that might impact delivery commitments
+
+Coaching and mentoring other team members with new technologies
+
+
+Job Designation
+
+
+Hybrid:
+Employee divides their time between in-office and remote work. Access to an office location is required. (Frequency: Minimum 2 days per week; may vary by team but will be weekly in-office expectation)
+
+ 
+
+Positions at Docusign are assigned a job designation of either In Office, Hybrid or Remote and are specific to the role/job. Preferred job designations are not guaranteed when changing positions within Docusign. Docusign reserves the right to change a position's job designation depending on business needs and as permitted by local law.
+
+
+What you bring
+
+
+Basic
+
+5+ years of relevant experience
+Solid understanding of CAP theorem, distributed locking, and data partitioning/sharding
+Experience debugging complex distributed failures (e.g., race conditions, memory leaks, or network "grey failures")
+Experience with Pub/Sub systems like Kafka, Pulsar, or RabbitMQ
+Deep understanding of OOP/OOD principles, design patterns and data structures
+Strong Java, C# or C++, object oriented design and programming skills
+Experience designing fault-tolerant, asynchronous systems and microservices
+Proven track record of building and optimizing systems that handle massive volumes of data (petabyte-scale or high-cardinality data).
+Experience with cloud-native orchestration (Kubernetes) and CI/CD pipelines
+
+Preferred
+
+Experience working on noSQL stores such as Cassandra, MongoDb & DocumentDb
+
+Experience working with Observability databases like Prometheus or ClickHouse
+
+Experience with dev tooling/portals like backstage.io
+
+Experience building instrumentation and telemetry pipelines to monitor system health• A high degree of curiosity and openness to learning
