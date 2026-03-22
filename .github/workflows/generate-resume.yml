@@ -22,6 +22,7 @@ on:
           - kotak_fullsack.txt
           - sample_job.txt
           - startup_fullstack.txt
+          - wellsFargo_se.txt
           # job-options:end
 
 permissions:
