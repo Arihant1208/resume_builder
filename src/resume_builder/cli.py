@@ -49,19 +49,43 @@ def _remove_existing_resume_outputs(mapping: list[dict], job_path: str, output: 
     return kept_entries
 
 
-def build_resume(profile_path: str, job_path: str, output_path: str | None = None) -> Path:
+def build_resume(profile_path: str, job_path: str, output_path: str | None = None, enhance: bool = False) -> Path:
     profile = load_profile(profile_path)
     job_description = load_job_description(job_path)
     tailored = tailor_profile(profile, job_description)
 
+    # LLM enhancement (Phase 2)
+    summary = tailored.get("summary", profile.basics.summary)
+    if enhance:
+        try:
+            from .llm import generate_summary, rewrite_bullets
+            jd_keywords = tailored.get("keywords", [])
+            seniority = tailored.get("seniority", "ENTRY")
+            jd_title = tailored.get("jd_title", "")
+
+            # Rewrite bullets
+            for exp in tailored["experience"]:
+                exp.bullets = rewrite_bullets(exp.bullets, jd_keywords, seniority, jd_title)
+            for proj in tailored["projects"]:
+                proj.bullets = rewrite_bullets(proj.bullets, jd_keywords, seniority, jd_title)
+
+            # Generate tailored summary
+            top_skills = [s for cat_skills in tailored["skills"].values() for s in cat_skills]
+            summary = generate_summary(profile.basics, top_skills, jd_keywords, seniority, jd_title)
+        except Exception:
+            pass  # Graceful fallback: use original content
+
     content = render_resume_latex(
         basics=profile.basics,
-        summary=profile.basics.summary,
+        summary=summary,
         grouped_skills=tailored["skills"],
         experience=tailored["experience"],
         projects=tailored["projects"],
         certificates=tailored["certificates"],
         education=tailored["education"],
+        achievements=tailored.get("achievements", []),
+        tech_tags=tailored.get("tech_tags"),
+        title_override=tailored.get("jd_title", ""),
     )
 
     output = Path(output_path) if output_path else _auto_output_path(job_path)
@@ -90,6 +114,7 @@ def create_parser() -> argparse.ArgumentParser:
     build.add_argument("--profile", default="data/profile.json", help="Path to profile JSON file (default: data/profile.json).")
     build.add_argument("--job", required=True, help="Path to job description text file.")
     build.add_argument("--output", default=None, help="Output LaTeX file. Auto-generated from job filename if omitted.")
+    build.add_argument("--enhance", action="store_true", help="Use LLM to rewrite bullets and generate a tailored summary (requires GEMINI_API_KEY).")
 
     analyze = subparsers.add_parser("analyze", help="Analyze how well your profile matches a job description.")
     analyze.add_argument("--profile", default="data/profile.json", help="Path to profile JSON file (default: data/profile.json).")
@@ -127,12 +152,23 @@ def _analyze(profile_path: str, job_path: str, as_json: bool) -> int:
         return 0
 
     print(f"Selection likelihood: {analysis['likelihood']} ({analysis['score']}%)")
+    print(f"Detected seniority level: {analysis['seniority']}")
+
+    if "experience_years" in analysis:
+        print(f"Your experience: {analysis['experience_years']} years (JD requires {analysis['required_years']}+)")
+
     print("Strong points:")
     for item in analysis["strong_points"]:
-        print(f"- {item}")
-    print("Potential gaps:")
+        print(f"  + {item}")
+    print("Potential gaps (missing keywords):")
     for item in analysis["missing_keywords"]:
-        print(f"- {item}")
+        print(f"  - {item}")
+
+    if analysis.get("critical_gaps"):
+        print("CRITICAL gaps (from Required Qualifications):")
+        for item in analysis["critical_gaps"]:
+            print(f"  ! {item}")
+
     return 0
 
 
@@ -141,8 +177,11 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.command == "build":
-        output_path = build_resume(args.profile, args.job, args.output)
+        enhance = getattr(args, "enhance", False)
+        output_path = build_resume(args.profile, args.job, args.output, enhance=enhance)
         print(f"Resume written to {output_path}")
+        if enhance:
+            print("(LLM enhancement applied)")
         return 0
 
     if args.command == "analyze":

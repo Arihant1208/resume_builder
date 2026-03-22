@@ -7,6 +7,23 @@ from .models import Basics, Certificate, Education, Experience, Project
 # Characters that need escaping in LaTeX text
 _LATEX_SPECIAL = re.compile(r"([#$%&_{}~^\\])")
 
+# ── Step B: Month name lookup ────────────────────────────────────
+_MONTHS = {
+    "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr",
+    "05": "May", "06": "Jun", "07": "Jul", "08": "Aug",
+    "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec",
+}
+
+
+def _format_date(iso: str) -> str:
+    """Convert '2023-01' → 'Jan 2023', 'Present' stays as-is."""
+    if not iso or iso.lower() == "present":
+        return iso or ""
+    parts = iso.split("-")
+    if len(parts) == 2 and parts[1] in _MONTHS:
+        return f"{_MONTHS[parts[1]]} {parts[0]}"
+    return iso
+
 
 def _escape(text: str) -> str:
     """Escape LaTeX special characters in plain text."""
@@ -34,27 +51,31 @@ def _href(url: str, display: str | None = None) -> str:
 
 # ── Document skeleton ──────────────────────────────────────────────
 
-PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
+def _make_preamble(basics: Basics, title: str) -> str:
+    """Generate preamble with PDF metadata (Step F)."""
+    author = _escape(basics.name)
+    pdf_title = _escape(f"{basics.name} - {title}" if title else basics.name)
+    return rf"""\documentclass[11pt,a4paper]{{article}}
 
 % ── Packages ──
-\usepackage[margin=0.6in]{geometry}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fontenc}
-\usepackage{parskip}
+\usepackage[margin=0.6in]{{geometry}}
+\usepackage{{enumitem}}
+\usepackage{{titlesec}}
+\usepackage[hidelinks, pdfauthor={{{author}}}, pdftitle={{{pdf_title}}}]{{hyperref}}
+\usepackage{{fontenc}}
+\usepackage{{parskip}}
 
 % ── Section formatting ──
-\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titleformat{{\section}}{{\large\bfseries\uppercase}}{{}}{{0pt}}{{}}[\titlerule]
+\titlespacing*{{\section}}{{0pt}}{{8pt}}{{4pt}}
 
 % ── List formatting ──
-\setlist[itemize]{nosep, left=0pt, labelsep=4pt, itemsep=1pt}
+\setlist[itemize]{{nosep, left=0pt, labelsep=4pt, itemsep=1pt}}
 
 % ── No page numbers ──
-\pagestyle{empty}
+\pagestyle{{empty}}
 
-\begin{document}
+\begin{{document}}
 """
 
 POSTAMBLE = r"""
@@ -64,12 +85,13 @@ POSTAMBLE = r"""
 
 # ── Section renderers ─────────────────────────────────────────────
 
-def render_header(basics: Basics) -> str:
+def render_header(basics: Basics, title_override: str = "") -> str:
     lines: list[str] = []
     lines.append(r"\begin{center}")
     lines.append(rf"{{\LARGE \textbf{{{_escape(basics.name)}}}}}")
-    if basics.title:
-        lines.append(rf"\\ {_escape(basics.title)}")
+    title = title_override or basics.title
+    if title:
+        lines.append(rf"\\ {_escape(title)}")
 
     contact: list[str] = []
     if basics.location:
@@ -98,10 +120,11 @@ def render_summary(summary: str) -> str:
     return f"\\section{{Summary}}\n{_escape(summary)}"
 
 
+# Step C: ATS-standard section name
 def render_skills(grouped_skills: dict[str, list[str]]) -> str:
     if not grouped_skills:
         return ""
-    lines = [r"\section{Skills}", r"\begin{itemize}"]
+    lines = [r"\section{Technical Skills}", r"\begin{itemize}"]
     for category, skills in grouped_skills.items():
         joined = ", ".join(_escape(s) for s in skills)
         lines.append(rf"  \item \textbf{{{_escape(category)}}}: {joined}")
@@ -109,17 +132,35 @@ def render_skills(grouped_skills: dict[str, list[str]]) -> str:
     return "\n".join(lines)
 
 
-def render_experience(experience: list[Experience]) -> str:
+# Step D: Tech stack line helper
+def _render_tech_line(tags: list[str]) -> str:
+    """Render an italic Technologies: line from a list of tag strings."""
+    if not tags:
+        return ""
+    # Title-case the tags for display
+    display = [t.title() if t.islower() else t for t in tags]
+    joined = ", ".join(_escape(d) for d in display)
+    return rf"\\ \textit{{Technologies: {joined}}}"
+
+
+def render_experience(experience: list[Experience], tech_tags: dict[int, list[str]] | None = None) -> str:
     if not experience:
         return ""
+    tech_tags = tech_tags or {}
     lines = [r"\section{Experience}"]
     for item in experience:
-        date_range = " -- ".join(part for part in [item.start_date, item.end_date] if part)
+        # Step B: Format dates
+        date_range = " -- ".join(_format_date(p) for p in [item.start_date, item.end_date] if p)
         lines.append(
             rf"\textbf{{{_escape(item.title)}}}, {_escape(item.company)} \hfill {_escape(date_range)}"
         )
         if item.location:
             lines.append(rf"\\ \textit{{{_escape(item.location)}}}")
+        # Step D: Tech stack line
+        entry_tags = tech_tags.get(id(item), [])
+        tech_line = _render_tech_line(entry_tags)
+        if tech_line:
+            lines.append(tech_line)
         lines.append(r"\begin{itemize}")
         for bullet in item.bullets:
             lines.append(rf"  \item {_escape(bullet)}")
@@ -128,9 +169,10 @@ def render_experience(experience: list[Experience]) -> str:
     return "\n".join(lines)
 
 
-def render_projects(projects: list[Project]) -> str:
+def render_projects(projects: list[Project], tech_tags: dict[int, list[str]] | None = None) -> str:
     if not projects:
         return ""
+    tech_tags = tech_tags or {}
     lines = [r"\section{Projects}"]
     for item in projects:
         header = rf"\textbf{{{_escape(item.name)}}}"
@@ -139,6 +181,11 @@ def render_projects(projects: list[Project]) -> str:
         if item.link:
             header += rf" -- {_href(item.link)}"
         lines.append(header)
+        # Step D: Tech stack line
+        entry_tags = tech_tags.get(id(item), [])
+        tech_line = _render_tech_line(entry_tags)
+        if tech_line:
+            lines.append(tech_line)
         lines.append(r"\begin{itemize}")
         for bullet in item.bullets:
             lines.append(rf"  \item {_escape(bullet)}")
@@ -147,12 +194,13 @@ def render_projects(projects: list[Project]) -> str:
     return "\n".join(lines)
 
 
+# Step C: ATS-standard section name
 def render_certificates(certificates: list[Certificate]) -> str:
     if not certificates:
         return ""
-    lines = [r"\section{Certificates}", r"\begin{itemize}"]
+    lines = [r"\section{Certifications}", r"\begin{itemize}"]
     for item in certificates:
-        details = ", ".join(part for part in [item.issuer, item.date] if part)
+        details = ", ".join(_format_date(p) if "-" in p else p for p in [item.issuer, item.date] if p)
         entry = _escape(item.name)
         if details:
             entry += rf" ({_escape(details)})"
@@ -166,7 +214,8 @@ def render_education(education: list[Education]) -> str:
         return ""
     lines = [r"\section{Education}"]
     for item in education:
-        date_range = " -- ".join(part for part in [item.start_date, item.end_date] if part)
+        # Step B: Format dates
+        date_range = " -- ".join(_format_date(p) for p in [item.start_date, item.end_date] if p)
         lines.append(
             rf"\textbf{{{_escape(item.degree)}}} \hfill {_escape(date_range)}"
         )
@@ -181,6 +230,17 @@ def render_education(education: list[Education]) -> str:
     return "\n".join(lines)
 
 
+# Step E: Render achievements section
+def render_achievements(achievements: list[str]) -> str:
+    if not achievements:
+        return ""
+    lines = [r"\section{Achievements}", r"\begin{itemize}"]
+    for item in achievements:
+        lines.append(rf"  \item {_escape(item)}")
+    lines.append(r"\end{itemize}")
+    return "\n".join(lines)
+
+
 # ── Main entry point ──────────────────────────────────────────────
 
 def render_resume_latex(
@@ -191,16 +251,22 @@ def render_resume_latex(
     projects: list[Project],
     certificates: list[Certificate],
     education: list[Education],
+    achievements: list[str] | None = None,
+    tech_tags: dict[int, list[str]] | None = None,
+    title_override: str = "",
 ) -> str:
+    preamble = _make_preamble(basics, title_override or basics.title)
+
     sections = [
-        render_header(basics),
+        render_header(basics, title_override),
         render_summary(summary),
         render_skills(grouped_skills),
-        render_experience(experience),
-        render_projects(projects),
+        render_experience(experience, tech_tags),
+        render_projects(projects, tech_tags),
         render_certificates(certificates),
         render_education(education),
+        render_achievements(achievements or []),
     ]
 
     body = "\n\n".join(s for s in sections if s)
-    return PREAMBLE + body + POSTAMBLE
+    return preamble + body + POSTAMBLE

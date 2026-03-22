@@ -4,7 +4,7 @@
 \usepackage[margin=0.6in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks, pdfauthor={Arihant Jain}, pdftitle={Arihant Jain - Software Engineer II}]{hyperref}
 \usepackage{fontenc}
 \usepackage{parskip}
 
@@ -21,71 +21,85 @@
 \begin{document}
 \begin{center}
 {\LARGE \textbf{Arihant Jain}}
-\\ Software Engineer
+\\ Software Engineer II
 \\ \href{mailto:arihant.opensource@gmail.com}{arihant.opensource@gmail.com} $\mid$ \href{https://linkedin.com/in/arihantjain1208}{LinkedIn} $\mid$ \href{https://github.com/Arihant1208}{GitHub}
 \end{center}
 
 \section{Summary}
 Software engineer with experience across backend systems, developer platforms, cloud integrations, and full-stack product delivery. Built cost-optimization workflows, security-focused portals, and production APIs using modern web, cloud, and data tooling.
 
-\section{Skills}
+\section{Technical Skills}
 \begin{itemize}
-  \item \textbf{Languages}: Python, C\#, Java, JavaScript, TypeScript, Rust, HTML/CSS
+  \item \textbf{Integrations}: Gemini AI, OpenAI API
+  \item \textbf{Languages}: Python
   \item \textbf{Cloud}: AWS, Azure
   \item \textbf{DevOps}: CI/CD
   \item \textbf{Tools}: Unix Shell
-  \item \textbf{Web Frameworks}: React.js
 \end{itemize}
 
 \section{Experience}
-\textbf{Software Development Engineer Intern}, Amazon \hfill 2023-01 -- 2023-07
+\textbf{Technical Consultant}, Source Code Control \hfill May 2024 -- Present
+\\ \textit{Technologies: Azure, React, Dotnet, Azure Functions, Docker, Github Actions}
 \begin{itemize}
-  \item Contributed across the software development lifecycle, from specification and design through rollout and maintenance.
-  \item Worked with senior engineers on design, coding, testing, and long-term maintainability.
-  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
-  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
+  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
+  \item Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD.
+  \item Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.
+  \item Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.
 \end{itemize}
 \vspace{2pt}
-\textbf{Technical Consultant}, Source Code Control \hfill 2024-05 -- Present
+\textbf{Software Development Engineer Intern}, Amazon \hfill Jan 2023 -- Jul 2023
 \begin{itemize}
-  \item Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD.
-  \item Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.
-  \item Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.
-  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
+  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
+  \item Led a project to overhaul the authentication system, improving accessibility and overall user experience.
+  \item Engineered a solution for storing and retrieving account types in the authentication service.
+  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
+  \item Contributed across the software development lifecycle, from specification and design through rollout and maintenance.
 \end{itemize}
 \vspace{2pt}
 
 \section{Projects}
+\textbf{KitchenWiz} (Builder) -- \href{https://github.com/Arihant1208/KitchenWiz}{https://github.com/Arihant1208/KitchenWiz}
+\\ \textit{Technologies: Gemini Ai, Typescript, React Native, Expo}
+\begin{itemize}
+  \item Built an AI-powered kitchen assistant mobile app using Expo and React Native.
+  \item Developed backend services and database layer for persistent user data.
+  \item Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.
+\end{itemize}
+\vspace{2pt}
 \textbf{Security Audit Framework} (Creator) -- \href{https://github.com/Arihant1208/Security_audit}{https://github.com/Arihant1208/Security\_audit}
+\\ \textit{Technologies: Owasp, Stride, Nist, Cis, Soc2}
 \begin{itemize}
   \item Built a comprehensive 7-phase security audit framework covering 12 security layers from architecture to business logic.
   \item Created STRIDE threat modeling templates, risk scoring calculators, and remediation guides for common vulnerability classes.
   \item Documented 27 attack patterns across identity, application, infrastructure, network, supply chain, and client-side categories.
+  \item Mapped findings to OWASP Top 10, NIST CSF, CIS Controls v8, and SOC 2 compliance standards.
 \end{itemize}
 \vspace{2pt}
-\textbf{KitchenWiz} (Builder) -- \href{https://github.com/Arihant1208/KitchenWiz}{https://github.com/Arihant1208/KitchenWiz}
+\textbf{AR-Dine} (Creator) -- \href{https://github.com/Arihant1208/ARDine}{https://github.com/Arihant1208/ARDine}
+\\ \textit{Technologies: Gemini Ai, Typescript, React, Express, Postgresql, Redis, Docker, Azure, Bicep, Helm, Kubernetes, Stripe, Google Oauth, Opentelemetry, Bullmq, Minio, S3, Clamav}
 \begin{itemize}
-  \item Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.
-  \item Built an AI-powered kitchen assistant mobile app using Expo and React Native.
-  \item Developed backend services and database layer for persistent user data.
-\end{itemize}
-\vspace{2pt}
-\textbf{StockTally} (Builder) -- \href{https://github.com/Arihant1208/StockTally}{https://github.com/Arihant1208/StockTally}
-\begin{itemize}
-  \item Designed data models and schema for product and inventory management.
-  \item Built a stock and inventory tracking application using Next.js and Prisma ORM.
-  \item Styled with Tailwind CSS for a responsive user interface.
+  \item Designed an 8-service Docker Compose architecture with Express API, BullMQ worker, PostgreSQL, Redis, MinIO, ClamAV, and OpenTelemetry.
+  \item Created Azure deployment infrastructure with Bicep IaC, CI/CD via GitHub Actions, and a Helm chart for Kubernetes (AKS/EKS/GKE).
+  \item Implemented security measures including JWT auth, rate limiting, ClamAV malware scanning, CSP headers, and parameterized SQL queries.
+  \item Built an AI-powered AR restaurant menu and ordering platform with separated customer and owner flows.
 \end{itemize}
 \vspace{2pt}
 
-\section{Certificates}
+\section{Certifications}
 \begin{itemize}
-  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, 2026-01)
-  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, 2025-07)
+  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, Jan 2026)
+  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, Jul 2025)
 \end{itemize}
 
 \section{Education}
-\textbf{BTech Information Technology | GPA: 8.3} \hfill 2023-06
+\textbf{BTech Information Technology | GPA: 8.3} \hfill Jun 2023
 \\ Chandigarh Engineering College
 \vspace{2pt}
+
+\section{Achievements}
+\begin{itemize}
+  \item Solved more than 500 coding problems on various programming websites.
+  \item Selected for SIH 2022 (Smart India Hackathon) External.
+  \item 3-star programmer on CodeChef.
+\end{itemize}
 \end{document}

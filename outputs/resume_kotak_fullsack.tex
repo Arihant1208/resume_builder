@@ -4,7 +4,7 @@
 \usepackage[margin=0.6in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks, pdfauthor={Arihant Jain}, pdftitle={Arihant Jain - About the Role:}]{hyperref}
 \usepackage{fontenc}
 \usepackage{parskip}
 
@@ -21,72 +21,85 @@
 \begin{document}
 \begin{center}
 {\LARGE \textbf{Arihant Jain}}
-\\ Software Engineer
+\\ About the Role:
 \\ \href{mailto:arihant.opensource@gmail.com}{arihant.opensource@gmail.com} $\mid$ \href{https://linkedin.com/in/arihantjain1208}{LinkedIn} $\mid$ \href{https://github.com/Arihant1208}{GitHub}
 \end{center}
 
 \section{Summary}
 Software engineer with experience across backend systems, developer platforms, cloud integrations, and full-stack product delivery. Built cost-optimization workflows, security-focused portals, and production APIs using modern web, cloud, and data tooling.
 
-\section{Skills}
+\section{Technical Skills}
 \begin{itemize}
-  \item \textbf{Languages}: JavaScript, HTML/CSS, TypeScript
+  \item \textbf{Languages}: JavaScript, TypeScript, HTML/CSS
   \item \textbf{Web Frameworks}: React.js, Node.js, Express.js
   \item \textbf{ORMs}: Prisma, Drizzle ORM
   \item \textbf{Cloud}: AWS
-  \item \textbf{DevOps}: CI/CD
-  \item \textbf{Databases}: MongoDB, SQL
+  \item \textbf{DevOps}: CI/CD, Bicep / IaC
+  \item \textbf{Databases}: MongoDB, SQL, PostgreSQL, Pinecone
+  \item \textbf{Integrations}: OpenAI API
 \end{itemize}
 
 \section{Experience}
-\textbf{Software Development Engineer Intern}, Amazon \hfill 2023-01 -- 2023-07
-\begin{itemize}
-  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
-  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
-  \item Led a project to overhaul the authentication system, improving accessibility and overall user experience.
-  \item Contributed across the software development lifecycle, from specification and design through rollout and maintenance.
-\end{itemize}
-\vspace{2pt}
-\textbf{Technical Consultant}, Source Code Control \hfill 2024-05 -- Present
+\textbf{Technical Consultant}, Source Code Control \hfill May 2024 -- Present
+\\ \textit{Technologies: Azure, React, Dotnet, Azure Functions, Docker, Github Actions}
 \begin{itemize}
   \item Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.
+  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
   \item Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD.
   \item Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.
-  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
+\end{itemize}
+\vspace{2pt}
+\textbf{Software Development Engineer Intern}, Amazon \hfill Jan 2023 -- Jul 2023
+\begin{itemize}
+  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
+  \item Led a project to overhaul the authentication system, improving accessibility and overall user experience.
+  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
+  \item Engineered a solution for storing and retrieving account types in the authentication service.
 \end{itemize}
 \vspace{2pt}
 
 \section{Projects}
 \textbf{AR-Dine} (Creator) -- \href{https://github.com/Arihant1208/ARDine}{https://github.com/Arihant1208/ARDine}
+\\ \textit{Technologies: Typescript, React, Express, Postgresql, Redis, Docker, Azure, Bicep, Helm, Kubernetes, Stripe, Google Oauth, Opentelemetry, Gemini Ai, Bullmq, Minio, S3, Clamav}
 \begin{itemize}
   \item Designed an 8-service Docker Compose architecture with Express API, BullMQ worker, PostgreSQL, Redis, MinIO, ClamAV, and OpenTelemetry.
   \item Created Azure deployment infrastructure with Bicep IaC, CI/CD via GitHub Actions, and a Helm chart for Kubernetes (AKS/EKS/GKE).
   \item Implemented Google OAuth authentication, Stripe payment processing (card, UPI, cash), and real-time order tracking with a state machine.
+  \item Implemented security measures including JWT auth, rate limiting, ClamAV malware scanning, CSP headers, and parameterized SQL queries.
+\end{itemize}
+\vspace{2pt}
+\textbf{Preserving Heritage} (Builder) -- \href{https://github.com/Arihant1208/PRESERVING-MONUMENTS}{https://github.com/Arihant1208/PRESERVING-MONUMENTS}
+\\ \textit{Technologies: Python, Cnn, Jupyter}
+\begin{itemize}
+  \item Built a computer vision project to identify and support preservation of heritage sites using satellite imagery.
+  \item Developed the project in a Jupyter Notebook environment using Python and deep learning workflows.
+  \item Integrated weather prediction data using a weather API.
 \end{itemize}
 \vspace{2pt}
 \textbf{KitchenWiz} (Builder) -- \href{https://github.com/Arihant1208/KitchenWiz}{https://github.com/Arihant1208/KitchenWiz}
+\\ \textit{Technologies: Typescript, React Native, Expo, Gemini Ai}
 \begin{itemize}
-  \item Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.
   \item Developed backend services and database layer for persistent user data.
+  \item Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.
   \item Built an AI-powered kitchen assistant mobile app using Expo and React Native.
 \end{itemize}
 \vspace{2pt}
-\textbf{StockTally} (Builder) -- \href{https://github.com/Arihant1208/StockTally}{https://github.com/Arihant1208/StockTally}
-\begin{itemize}
-  \item Styled with Tailwind CSS for a responsive user interface.
-  \item Designed data models and schema for product and inventory management.
-  \item Built a stock and inventory tracking application using Next.js and Prisma ORM.
-\end{itemize}
-\vspace{2pt}
 
-\section{Certificates}
+\section{Certifications}
 \begin{itemize}
-  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, 2025-07)
-  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, 2026-01)
+  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, Jul 2025)
+  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, Jan 2026)
 \end{itemize}
 
 \section{Education}
-\textbf{BTech Information Technology | GPA: 8.3} \hfill 2023-06
+\textbf{BTech Information Technology | GPA: 8.3} \hfill Jun 2023
 \\ Chandigarh Engineering College
 \vspace{2pt}
+
+\section{Achievements}
+\begin{itemize}
+  \item Solved more than 500 coding problems on various programming websites.
+  \item Selected for SIH 2022 (Smart India Hackathon) External.
+  \item 3-star programmer on CodeChef.
+\end{itemize}
 \end{document}
