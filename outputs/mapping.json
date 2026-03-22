@@ -63,5 +63,10 @@
     "job": "jobs/cohera_se.txt",
     "resume": "outputs/resume_cohera_se.tex",
     "generated_at": "2026-03-21T18:43:21+00:00"
+  },
+  {
+    "job": "jobs/wellsFargo_se.txt",
+    "resume": "outputs/resume_wellsFargo_se.tex",
+    "generated_at": "2026-03-22T07:28:12+00:00"
   }
 ]
