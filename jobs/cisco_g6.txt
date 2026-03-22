@@ -1,0 +1,96 @@
+G6-Software Engineer
+Location:Bangalore, India
+Category:Product and Engineering
+Job ID:2010876
+
+Job Description
+Please note this posting is to advertise potential job opportunities. This exact role may not be open today but could open in the near future. When you apply, a Cisco representative may contact you directly if a relevant position opens.
+
+Who You'll Work With
+
+The IBNG (Intent based Networking Group) develops software across the routing, switch and wireless platform portfolio at Cisco and is investing heavily to transform networking through cutting-edge solutions that will change the way IT is consumed. This means your work will transform our customers' consumption of our systems and solutions from every angle. Cisco's Enterprise Routing is multi-billion dollar growing business that generates its revenue primarily in the Mid-Range routing market space (Edge and Access Routing).  The Portfolio of this team includes SDWAN, SASE, Branch Security, Application Aware Routing, Centralized Policy, Cloud Controllers, Cloud Networking, COLO, SaaS Gateway, Cloud onramp and other next generation technology for WAN Infra. Cisco's Enterprise Routing has Platforms from Low End branches to High End Data Centres and Cloud Router to Extend Enterprise Network.
+
+What You'll Do
+
+  
+
+We are looking for a high energy, self-motivated, bold, bright and empathetic Software Developer to join Enterprise Routing Technical Team. Be a part of Cisco's journey of Intent Based Networking, transforming the way people connect with technology.
+
+Independently able to execute given functionality or features. Team is responsible to build and constantly enhance end-to-end Solution Automation Framework for next generation SDWAN solutions, which include SASE, SaaS gateway, branch security, COLO, Application QoE, Application Aware Routing. Responsibility will also be to build solution on multi-cloud (AWS, GSP, Azure etc) environment, Cloud controllers, Application Analytics, REST Infra, follow CI/CD practices. 
+
+Who You'll Work With
+
+Enterprise routing team is a group of high energy, passionate on Quality, customer focused engineers who bring diverse perspectives and experiences to bear on the toughest engineering challenges. Work with a team of motivated A-players to create innovative solutions, work closely with other developers and software architects to develop best-in-class solution. Drive/collaborate with other technical leaders/software engineers on system/functional design, software implementation.   
+
+Job Responsibilities
+
+Be part of a project team developing backend software for Cisco SD-WAN routers, controllers, and cloud-based services.
+
+Design, develop, and maintain Java-based backend services, with a strong focus on RESTful APIs.
+
+Contribute to subsystem and product-level architecture, including functional and design specifications.
+
+Develop complex features spanning multiple modules with an emphasis on scalability, performance, and reliability.
+
+Debug and resolve complex system-level issues in distributed environments.
+
+Write unit test plans and perform subsystem and system-level testing.
+
+Identify and fix issues found during internal verification as well as customer deployments.
+
+Collaborate closely with cross-functional teams in a fast-paced, agile environment.
+
+Continuously learn and adopt new technologies, tools, and frameworks as needed.
+
+Required Qualifications
+
+BE / B.Tech / MCA in Computer Science, Electrical Engineering, or related field with 2+ years of experience.
+
+Strong hands-on experience in Java backend development, including:
+
+REST API design and implementation
+
+Microservices-based architectures
+
+Data structures, algorithms, and design patterns
+
+Good working knowledge of Python and scripting for automation, tooling, and operational workflows.
+
+Basic understanding of TCP/IP and networking fundamentals.
+
+Strong understanding of Linux and Linux-based application environments.
+
+Experience with SD-WAN concepts, architectures, and use cases (control plane, data plane, orchestration, policies, security).
+
+Familiarity with distributed systems and backend services at scale.
+
+Working knowledge of open-source technologies such as:
+
+Elasticsearch, Neo4j, and similar data stores/search platforms
+
+Exposure to AI/ML concepts, especially in areas such as:
+
+Network analytics
+
+Telemetry-driven insights
+
+Anomaly detection and optimization
+
+Experience with containers and virtualization technologies such as Docker/LXC and VMs.
+
+Knowledge of public cloud platforms and virtualization technologies (VMware, OpenStack, KVM) is a plus.
+
+Exposure to the full Software Development Life Cycle (SDLC).
+
+Familiarity with development and CI/CD tools such as Git, Bitbucket, JIRA, and Jenkins.
+
+Strong problem-solving skills with the ability to analyze complex systems and translate ideas into code.
+
+Ability to work independently with high ownership and minimal supervision.
+
+Why Cisco? 
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere. 
+
+We are Cisco, and our power starts with you. 
