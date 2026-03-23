@@ -73,5 +73,10 @@
     "job": "jobs/cisco_g6.txt",
     "resume": "outputs/resume_cisco_g6.tex",
     "generated_at": "2026-03-22T09:37:11+00:00"
+  },
+  {
+    "job": "jobs/airbnb_fe.txt",
+    "resume": "outputs/resume_airbnb_fe.tex",
+    "generated_at": "2026-03-23T18:40:35+00:00"
   }
 ]
