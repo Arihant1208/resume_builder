@@ -10,6 +10,7 @@ on:
         options:
           # job-options:start
           - Swiggy_SDET.txt
+          - airbnb_fe.txt
           - akemi_solutionArchitect.txt
           - bytedance_backend.txt
           - cisco_g6.txt
