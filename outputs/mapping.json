@@ -78,5 +78,10 @@
     "job": "jobs/airbnb_fe.txt",
     "resume": "outputs/resume_airbnb_fe.tex",
     "generated_at": "2026-03-23T18:40:35+00:00"
+  },
+  {
+    "job": "jobs/cockroachlab_mts.txt",
+    "resume": "outputs/resume_cockroachlab_mts.tex",
+    "generated_at": "2026-03-24T07:46:35+00:00"
   }
 ]
