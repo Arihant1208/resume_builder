@@ -23,6 +23,7 @@ on:
           - google_SE_singapore.txt
           - harness_se_2.txt
           - kotak_fullsack.txt
+          - master_resume.txt
           - sample_job.txt
           - startup_fullstack.txt
           - wellsFargo_se.txt
