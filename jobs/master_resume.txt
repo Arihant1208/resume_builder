@@ -1,0 +1,39 @@
+Master Resume — Full-Stack Software Engineer
+
+We are looking for a versatile Software Engineer who thrives across the full stack — from backend systems and cloud infrastructure to frontend experiences and mobile applications. This role demands adaptability, strong engineering fundamentals, and the ability to deliver production-grade products end-to-end.
+
+Responsibilities:
+- Design, build, and deploy full-stack web applications and APIs
+- Architect microservices, distributed systems, and cloud-native infrastructure
+- Implement authentication, security best practices, and compliance frameworks
+- Build CI/CD pipelines, containerized deployments, and Infrastructure as Code
+- Develop AI-powered features using LLM APIs and machine learning models
+- Create mobile applications with cross-platform frameworks
+- Integrate third-party services: payment processing, OAuth, observability
+- Write clean, testable code with strong DevOps and automation practices
+
+Required Qualifications:
+- Strong proficiency in TypeScript, JavaScript, Python, C#, Java, Rust
+- Experience with React.js, Next.js, Node.js, Express.js, .NET, Spring Boot
+- Cloud platforms: AWS, Azure (Azure Functions, Container Apps, Bicep IaC)
+- Databases: PostgreSQL, MongoDB, Redis, SQL, Pinecone vector database
+- DevOps: Docker, Docker Compose, Kubernetes, Helm, GitHub Actions, CI/CD
+- Security: OWASP, STRIDE threat modeling, SBOM supply chain security, JWT, ClamAV
+- Observability: OpenTelemetry, distributed tracing, monitoring
+- API design, RESTful services, microservices architecture
+- Mobile: React Native, Expo
+- AI/ML: OpenAI API, Gemini AI, deep learning, computer vision, CNN
+- Payment integration: Stripe (card, UPI, webhooks)
+- Authentication: Google OAuth, SSO
+- ORMs: Prisma, Drizzle ORM
+- Infrastructure as Code: Bicep, Helm charts
+- Git, GitHub, Unix Shell, VS Code
+
+Desired Qualifications:
+- Experience delivering products end-to-end from design to deployment
+- Cost optimization and cloud migration expertise
+- Background in security audits, compliance (NIST CSF, CIS Controls, SOC 2)
+- Data engineering and analytics pipelines (Microsoft Fabric)
+- Experience at scale — large enterprise systems (Amazon-scale)
+- Strong problem-solving skills demonstrated through competitive programming
+- Hackathon experience and rapid prototyping ability

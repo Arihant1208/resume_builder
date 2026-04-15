@@ -1,0 +1,230 @@
+\documentclass[11pt,a4paper]{article}
+
+% ── Packages ──
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks, pdfauthor={Arihant Jain}, pdftitle={Arihant Jain - Software Engineer}]{hyperref}
+\usepackage{fontenc}
+\usepackage{parskip}
+
+% ── Section formatting ──
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% ── List formatting ──
+\setlist[itemize]{nosep, left=0pt, labelsep=4pt, itemsep=1pt}
+
+% ── No page numbers ──
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Arihant Jain}}
+\\ Software Engineer
+\\ \href{mailto:arihant.opensource@gmail.com}{arihant.opensource@gmail.com} $\mid$ \href{https://linkedin.com/in/arihantjain1208}{LinkedIn} $\mid$ \href{https://github.com/Arihant1208}{GitHub}
+\end{center}
+
+\section{Summary}
+Versatile software engineer with production experience spanning backend systems, cloud infrastructure, full-stack product delivery, security, and AI integration. Built and shipped end-to-end products at Amazon and consulting engagements --- from cost-optimization algorithms and SBOM security portals to AI-powered ordering platforms and mobile apps. Comfortable across C\#, TypeScript, Python, Java, and Rust with a strong DevOps and cloud-native foundation.
+
+\section{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages}: C\#, Python, Java, TypeScript, JavaScript, Rust, HTML/CSS, SQL
+  \item \textbf{Web Frameworks}: React.js, Node.js, Express.js, .NET, Spring Boot, Next.js, React Native / Expo
+  \item \textbf{Databases \& ORMs}: PostgreSQL, MongoDB, Redis, Pinecone, Prisma, Drizzle ORM
+  \item \textbf{Cloud \& DevOps}: AWS, Azure, Docker / Docker Compose, Kubernetes / Helm, CI/CD (GitHub Actions), Bicep / IaC, OpenTelemetry
+  \item \textbf{Integrations \& AI}: OpenAI API, Gemini AI, Stripe, Google OAuth, BullMQ
+  \item \textbf{Security}: OWASP Top 10, STRIDE Threat Modeling, NIST CSF, CIS Controls, SOC 2, JWT, ClamAV
+  \item \textbf{Tools}: Git/GitHub, Unix Shell, VS Code
+\end{itemize}
+
+\section{Experience}
+\textbf{Technical Consultant}, Source Code Control \hfill May 2024 -- Present
+\\ \textit{Technologies: React, .NET, Azure Functions, Docker, GitHub Actions, Azure Container Apps}
+\begin{itemize}
+  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
+  \item Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD.
+  \item Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.
+  \item Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.
+\end{itemize}
+\vspace{2pt}
+\textbf{Software Development Engineer Intern}, Amazon \hfill Jan 2023 -- Jul 2023
+\\ \textit{Technologies: Backend Services, API Development, Authentication Systems}
+\begin{itemize}
+  \item Led a project to overhaul the authentication system, improving accessibility and overall user experience.
+  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
+  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
+  \item Engineered a solution for storing and retrieving account types in the authentication service.
+\end{itemize}
+\vspace{2pt}
+
+\section{Projects}
+\textbf{AR-Dine} (Creator) -- \href{https://github.com/Arihant1208/ARDine}{GitHub}
+\\ \textit{Technologies: TypeScript, React, Express, PostgreSQL, Redis, Docker, Kubernetes, Azure, Bicep, Helm, Stripe, OpenTelemetry, Gemini AI, BullMQ}
+\begin{itemize}
+  \item Built an AI-powered AR restaurant menu and ordering platform with separated customer and owner flows.
+  \item Designed an 8-service Docker Compose architecture with Express API, BullMQ worker, PostgreSQL, Redis, MinIO, ClamAV, and OpenTelemetry.
+  \item Implemented Google OAuth, Stripe payments (card, UPI, cash), and real-time order tracking with a state machine.
+  \item Created Azure deployment infrastructure with Bicep IaC, CI/CD via GitHub Actions, and a Helm chart for Kubernetes (AKS/EKS/GKE).
+  \item Implemented security: JWT auth, rate limiting, ClamAV malware scanning, CSP headers, and parameterized SQL queries.
+\end{itemize}
+\vspace{2pt}
+\textbf{Security Audit Framework} (Creator) -- \href{https://github.com/Arihant1208/security-audit-monorepo}{GitHub}
+\\ \textit{Technologies: TypeScript, OWASP, STRIDE, NIST CSF, CIS Controls, SOC 2}
+\begin{itemize}
+  \item Built a comprehensive 7-phase security audit framework covering 12 security layers from architecture to business logic.
+  \item Documented 27 attack patterns across identity, application, infrastructure, network, supply chain, and client-side categories.
+  \item Created STRIDE threat modeling templates, risk scoring calculators, and remediation guides for common vulnerability classes.
+  \item Mapped findings to OWASP Top 10, NIST CSF, CIS Controls v8, and SOC 2 compliance standards.
+\end{itemize}
+\vspace{2pt}
+\textbf{ChatPDF} (Builder) -- \href{https://github.com/Arihant1208/ChatPdf}{GitHub}
+\\ \textit{Technologies: TypeScript, Next.js, PostgreSQL, AWS, Pinecone, OpenAI API, Drizzle ORM}
+\begin{itemize}
+  \item Built a chat application that lets users interact with PDF documents through context-aware AI conversations.
+  \item Integrated the OpenAI API for document-aware responses and Pinecone vector database for semantic search.
+  \item Used PostgreSQL with Drizzle ORM for data persistence on an AWS-hosted stack.
+\end{itemize}
+\vspace{2pt}
+\textbf{KitchenWiz} (Builder) -- \href{https://github.com/Arihant1208/KitchenWiz-expo}{GitHub}
+\\ \textit{Technologies: TypeScript, React Native, Expo, Gemini AI}
+\begin{itemize}
+  \item Built an AI-powered kitchen assistant mobile app using Expo and React Native.
+  \item Integrated Google Gemini AI API for intelligent recipe suggestions and kitchen management features.
+\end{itemize}
+\vspace{2pt}
+\textbf{Preserving Heritage} (Builder) -- \href{https://github.com/Arihant1208/PRESERVING-MONUMENTS}{GitHub}
+\\ \textit{Technologies: Python, Deep Learning, CNN, Computer Vision, Weather API}
+\begin{itemize}
+  \item Built a computer vision project to identify heritage sites using satellite imagery with a CNN-based model.
+  \item Integrated weather prediction data using a weather API for preservation insights.
+\end{itemize}
+\vspace{2pt}
+
+\section{Certifications}
+\begin{itemize}
+  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, Jul 2025)
+  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, Jan 2026)
+\end{itemize}
+
+\section{Education}
+\textbf{BTech Information Technology | GPA: 8.3} \hfill Jun 2023
+\\ Chandigarh Engineering College
+\vspace{2pt}
+
+\section{Achievements}
+\begin{itemize}
+  \item Solved more than 500 coding problems on various programming websites.
+  \item Selected for SIH 2022 (Smart India Hackathon) External.
+  \item 3-star programmer on CodeChef.
+\end{itemize}
+\end{document}
+\documentclass[11pt,a4paper]{article}
+
+% ── Packages ──
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks, pdfauthor={Arihant Jain}, pdftitle={Arihant Jain - Master Resume — Full-Stack Software Engineer}]{hyperref}
+\usepackage{fontenc}
+\usepackage{parskip}
+
+% ── Section formatting ──
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ── List formatting ──
+\setlist[itemize]{nosep, left=0pt, labelsep=4pt, itemsep=1pt}
+
+% ── No page numbers ──
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Arihant Jain}}
+\\ Master Resume — Full-Stack Software Engineer
+\\ \href{mailto:arihant.opensource@gmail.com}{arihant.opensource@gmail.com} $\mid$ \href{https://linkedin.com/in/arihantjain1208}{LinkedIn} $\mid$ \href{https://github.com/Arihant1208}{GitHub}
+\end{center}
+
+\section{Summary}
+Software engineer with experience across backend systems, developer platforms, cloud integrations, and full-stack product delivery. Built cost-optimization workflows, security-focused portals, and production APIs using modern web, cloud, and data tooling.
+
+\section{Technical Skills}
+\begin{itemize}
+  \item \textbf{DevOps}: Docker / Docker Compose, CI/CD, Bicep / IaC, Kubernetes / Helm, OpenTelemetry
+  \item \textbf{Cloud}: Azure, AWS
+  \item \textbf{Integrations}: Google OAuth, OpenAI API
+  \item \textbf{Languages}: Python, TypeScript
+  \item \textbf{Web Frameworks}: React Native / Expo, Node.js, Express.js, Spring Boot
+  \item \textbf{Tools}: Git/GitHub
+\end{itemize}
+
+\section{Experience}
+\textbf{Technical Consultant}, Source Code Control \hfill May 2024 -- Present
+\\ \textit{Technologies: Azure Functions, Github Actions, Azure, Docker, React, Dotnet}
+\begin{itemize}
+  \item Developed a cost-optimization algorithm for cloud migration that reduced storage costs by 30\%.
+  \item Built the GoSmarter product for NightingaleHQ end-to-end using React on the front end and .NET with Azure Functions on the back end, containerized and deployed to Azure with GitHub Actions CI/CD.
+  \item Designed and implemented a portal for SBOM supply chain security, delivering both front-end and back-end functionality.
+  \item Integrated APIs and scheduling services for automatic retrieval and updates of product varieties and pricing data from Azure.
+\end{itemize}
+\vspace{2pt}
+\textbf{Software Development Engineer Intern}, Amazon \hfill Jan 2023 -- Jul 2023
+\begin{itemize}
+  \item Developed an API for fetching account types from the database and carried it through end-to-end testing and deployment.
+  \item Led a project to overhaul the authentication system, improving accessibility and overall user experience.
+  \item Engineered a solution for storing and retrieving account types in the authentication service.
+  \item Executed changes to streamline user access, contributing to a projected 33\% increase in user retention for Amazon Business.
+  \item Contributed across the software development lifecycle, from specification and design through rollout and maintenance.
+\end{itemize}
+\vspace{2pt}
+
+\section{Projects}
+\textbf{AR-Dine} (Creator) -- \href{https://github.com/Arihant1208/ARDine}{https://github.com/Arihant1208/ARDine}
+\\ \textit{Technologies: Google Oauth, Docker, Azure, Bicep, Helm, Typescript, React, Express, Postgresql, Redis, Kubernetes, Stripe, Opentelemetry, Gemini Ai, Bullmq, Minio, S3, Clamav}
+\begin{itemize}
+  \item Created Azure deployment infrastructure with Bicep IaC, CI/CD via GitHub Actions, and a Helm chart for Kubernetes (AKS/EKS/GKE).
+  \item Designed an 8-service Docker Compose architecture with Express API, BullMQ worker, PostgreSQL, Redis, MinIO, ClamAV, and OpenTelemetry.
+  \item Implemented Google OAuth authentication, Stripe payment processing (card, UPI, cash), and real-time order tracking with a state machine.
+  \item Implemented security measures including JWT auth, rate limiting, ClamAV malware scanning, CSP headers, and parameterized SQL queries.
+  \item Built an AI-powered AR restaurant menu and ordering platform with separated customer and owner flows.
+\end{itemize}
+\vspace{2pt}
+\textbf{Preserving Heritage} (Builder) -- \href{https://github.com/Arihant1208/PRESERVING-MONUMENTS}{https://github.com/Arihant1208/PRESERVING-MONUMENTS}
+\\ \textit{Technologies: Python, Cnn, Jupyter}
+\begin{itemize}
+  \item Developed the project in a Jupyter Notebook environment using Python and deep learning workflows.
+  \item Built a computer vision project to identify and support preservation of heritage sites using satellite imagery.
+  \item Integrated weather prediction data using a weather API.
+  \item Trained a CNN-based model for monument identification.
+\end{itemize}
+\vspace{2pt}
+\textbf{Security Audit Framework} (Creator) -- \href{https://github.com/Arihant1208/security-audit-monorepo}{https://github.com/Arihant1208/security-audit-monorepo}
+\\ \textit{Technologies: Typescript, Owasp, Stride, Nist, Cis, Soc2}
+\begin{itemize}
+  \item Built a comprehensive 7-phase security audit framework covering 12 security layers from architecture to business logic.
+  \item Created STRIDE threat modeling templates, risk scoring calculators, and remediation guides for common vulnerability classes.
+  \item Documented 27 attack patterns across identity, application, infrastructure, network, supply chain, and client-side categories.
+  \item Mapped findings to OWASP Top 10, NIST CSF, CIS Controls v8, and SOC 2 compliance standards.
+\end{itemize}
+\vspace{2pt}
+
+\section{Certifications}
+\begin{itemize}
+  \item Microsoft 365 Certified: Endpoint Administrator Associate (Microsoft, Jul 2025)
+  \item Microsoft Certified: Fabric Data Engineer Associate (Microsoft, Jan 2026)
+\end{itemize}
+
+\section{Education}
+\textbf{BTech Information Technology | GPA: 8.3} \hfill Jun 2023
+\\ Chandigarh Engineering College
+\vspace{2pt}
+
+\section{Achievements}
+\begin{itemize}
+  \item Solved more than 500 coding problems on various programming websites.
+  \item Selected for SIH 2022 (Smart India Hackathon) External.
+  \item 3-star programmer on CodeChef.
+\end{itemize}
+\end{document}

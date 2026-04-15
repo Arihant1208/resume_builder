@@ -97,8 +97,8 @@
     {
       "name": "Security Audit Framework",
       "role": "Creator",
-      "link": "https://github.com/Arihant1208/Security_audit",
-      "tags": ["security", "owasp", "stride", "threat modeling", "risk scoring", "compliance", "nist", "cis", "soc2", "audit"],
+      "link": "https://github.com/Arihant1208/security-audit-monorepo",
+      "tags": ["typescript", "security", "owasp", "stride", "threat modeling", "risk scoring", "compliance", "nist", "cis", "soc2", "audit"],
       "bullets": [
         "Built a comprehensive 7-phase security audit framework covering 12 security layers from architecture to business logic.",
         "Documented 27 attack patterns across identity, application, infrastructure, network, supply chain, and client-side categories.",
@@ -122,7 +122,7 @@
     {
       "name": "KitchenWiz",
       "role": "Builder",
-      "link": "https://github.com/Arihant1208/KitchenWiz",
+      "link": "https://github.com/Arihant1208/KitchenWiz-expo",
       "tags": ["typescript", "react native", "expo", "gemini ai", "mobile", "ai", "kitchen assistant"],
       "bullets": [
         "Built an AI-powered kitchen assistant mobile app using Expo and React Native.",
